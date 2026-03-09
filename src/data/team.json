@@ -3,24 +3,36 @@
     "id": 1,
     "name": "Alex Johnson",
     "role": "President",
-    "imageUrl": "https://i.pravatar.cc/150?u=alex"
+    "imageUrl": "https://i.pravatar.cc/150?u=alex",
+    "mailUrl": "mailto:alex@syntaxclub.com",
+    "linkedinUrl": "#",
+    "githubUrl": "#"
   },
   {
     "id": 2,
     "name": "Sarah Smith",
     "role": "Vice President",
-    "imageUrl": "https://i.pravatar.cc/150?u=sarah"
+    "imageUrl": "https://i.pravatar.cc/150?u=sarah",
+    "mailUrl": "mailto:sarah@syntaxclub.com",
+    "linkedinUrl": "#",
+    "githubUrl": "#"
   },
   {
     "id": 3,
     "name": "David Lee",
     "role": "Tech Lead",
-    "imageUrl": "https://i.pravatar.cc/150?u=david"
+    "imageUrl": "https://i.pravatar.cc/150?u=david",
+    "mailUrl": "mailto:david@syntaxclub.com",
+    "linkedinUrl": "#",
+    "githubUrl": "#"
   },
   {
     "id": 4,
     "name": "Emily Chen",
     "role": "Event Coordinator",
-    "imageUrl": "https://i.pravatar.cc/150?u=emily"
+    "imageUrl": "https://i.pravatar.cc/150?u=emily",
+    "mailUrl": "mailto:emily@syntaxclub.com",
+    "linkedinUrl": "#",
+    "githubUrl": "#"
   }
 ]

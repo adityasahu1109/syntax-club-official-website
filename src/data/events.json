@@ -3,24 +3,63 @@
     "id": 1,
     "title": "Annual Hackathon 2023",
     "date": "2023-11-15",
+    "category": "Competition",
     "location": "Main Hall",
-    "description": "Our biggest event of the year! 48 hours of building, learning, and collaborating.",
+    "description": "Our biggest event of the year! 48 hours of building, learning, and collaborating on innovative projects.",
     "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": 2,
     "title": "Web Dev Workshop",
     "date": "2024-02-10",
+    "category": "Workshop",
     "location": "Lab 3",
-    "description": "Learn the basics of React and modern frontend development.",
+    "description": "Learn the basics of React and modern frontend development from our senior developers.",
     "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600"
   },
   {
     "id": 3,
     "title": "Algorithm Nights",
     "date": "2024-03-05",
+    "category": "Seminar",
     "location": "Room 204",
-    "description": "Weekly deep dive into complex algorithms and data structures.",
+    "description": "Weekly deep dive into complex algorithms and data structures to prepare for technical interviews.",
     "imageUrl": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "id": 4,
+    "title": "Cloud Computing Seminar",
+    "date": "2024-08-20",
+    "category": "Seminar",
+    "location": "Auditorium B",
+    "description": "An introduction to cloud infrastructure, DevOps workflows, and deployment best practices.",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "id": 5,
+    "title": "CodeFest 2026",
+    "date": "2026-05-15",
+    "category": "Competition",
+    "location": "Main Hall",
+    "description": "Our flagship annual hackathon. Build something extraordinary in 48 hours and compete for prizes.",
+    "imageUrl": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "id": 6,
+    "title": "Intro to Machine Learning",
+    "date": "2026-04-10",
+    "category": "Workshop",
+    "location": "Lab 3",
+    "description": "Hands-on workshop covering Python, scikit-learn, and building your first ML model from scratch.",
+    "imageUrl": "https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "id": 7,
+    "title": "Tech Talk: Open Source",
+    "date": "2026-04-25",
+    "category": "Seminar",
+    "location": "Room 204",
+    "description": "Guest speakers share their journey contributing to major open-source projects like Linux and React.",
+    "imageUrl": "https://images.unsplash.com/photo-1543269664-7eef42226a21?auto=format&fit=crop&q=80&w=600"
   }
 ]

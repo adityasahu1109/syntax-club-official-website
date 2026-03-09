@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Johnson",
+    "role": "President",
+    "imageUrl": "https://i.pravatar.cc/150?u=alex"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Smith",
+    "role": "Vice President",
+    "imageUrl": "https://i.pravatar.cc/150?u=sarah"
+  },
+  {
+    "id": 3,
+    "name": "David Lee",
+    "role": "Tech Lead",
+    "imageUrl": "https://i.pravatar.cc/150?u=david"
+  },
+  {
+    "id": 4,
+    "name": "Emily Chen",
+    "role": "Event Coordinator",
+    "imageUrl": "https://i.pravatar.cc/150?u=emily"
+  }
+]

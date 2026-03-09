@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Campus Explorer",
+    "category": "Mobile App",
+    "description": "A navigation app to help freshers find their way around the campus.",
+    "imageUrl": "https://images.unsplash.com/photo-1526304640581-d334cdbdf45e?auto=format&fit=crop&q=80&w=600",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "title": "Study Buddy Matcher",
+    "category": "Web App",
+    "description": "Platform connecting students based on their courses and study habits.",
+    "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "title": "Auto Grader bot",
+    "category": "Tool",
+    "description": "A discord bot for automating assignments evaluation.",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600",
+    "link": "#"
+  }
+]

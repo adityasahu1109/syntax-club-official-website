@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00ffff",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f2323",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Syntax Events</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-primary/20 px-6 py-4 md:px-10">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Syntax</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Events</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Community</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 lg:gap-8">
+<label class="hidden sm:flex items-stretch rounded-lg h-10 bg-slate-100 dark:bg-primary/10 border border-transparent focus-within:border-primary/50 transition-all">
+<div class="flex items-center justify-center pl-3 text-slate-500 dark:text-primary/70">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-400 dark:placeholder:text-primary/40 px-3" placeholder="Search events..." type="text"/>
+</label>
+<div class="size-10 rounded-full border-2 border-primary/30 bg-cover bg-center" data-alt="User profile avatar circle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJ_iYBGEqDa3IxfELNyM3LlNQA7hEjcKrdFLzxA1CQLxnCYGRSAUhh4p6ToW023K2pln68Gptvs200T7u1EnCutowZbfVYDHmB-uQG7Llv7PFtqjGse1zBXI-f4fTwYc8fADdQoFaxQox6VxYl890Uo4SMYV2XEN11Xv4yK5MFA8FqJRsRt7PDb-VtU0FgzNfea3YOis5-rBOcvzhtK_C6fAIcnfRalqglCaBH6pHacyye3pvrQ7l4SROUt2L8Pb2JtXxeJa0L0Xg')"></div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto w-full px-6 py-8">
+<!-- Page Header & Filter Bar -->
+<div class="flex flex-col gap-6 mb-12">
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Developer Events</h1>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl">Connect, learn, and grow with the global Syntax community. From workshops to large-scale conferences.</p>
+</div>
+<div class="flex flex-wrap items-center gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-4 py-2 rounded-lg bg-primary text-black font-bold text-sm whitespace-nowrap">All Events</button>
+<button class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-primary/10 hover:bg-primary/20 transition-colors text-sm font-medium whitespace-nowrap">Web Development</button>
+<button class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-primary/10 hover:bg-primary/20 transition-colors text-sm font-medium whitespace-nowrap">Artificial Intelligence</button>
+<button class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-primary/10 hover:bg-primary/20 transition-colors text-sm font-medium whitespace-nowrap">UI/UX Design</button>
+<button class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-primary/10 hover:bg-primary/20 transition-colors text-sm font-medium whitespace-nowrap">Cybersecurity</button>
+<button class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-primary/10 hover:bg-primary/20 transition-colors text-sm font-medium whitespace-nowrap">Cloud Architecture</button>
+</div>
+</div>
+<!-- Upcoming Events Section -->
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8 border-b border-slate-200 dark:border-primary/10 pb-4">
+<h2 class="text-2xl font-bold">Upcoming Events</h2>
+<span class="text-primary text-sm font-semibold uppercase tracking-wider">Stay Ahead</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Upcoming Card 1 -->
+<div class="flex flex-col bg-slate-50 dark:bg-primary/5 rounded-xl border border-slate-200 dark:border-primary/10 overflow-hidden hover:border-primary transition-all group">
+<div class="h-48 bg-cover bg-center overflow-hidden" data-alt="Developer conference stage with bright lights" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7wA_pSU7XVvrYKwNDpo0b72VF8kxo4nfVsyhE6CNOxE5gzWwzgxIjjBNPV5tReyxUGZf5AReTrCwWxh2qBv3ddqhhsWBuXggZYh7WHH4RYYghjqTj5v2R3hhhCPlYsIZfXjMR-Z-0vosFjQz4r0szucd8op7QznkKIaubQ-JpcdmULKEiUNPzJIlMsRt1z-Pckfv9MAP8j-B4gknG_8lbZc0urqRH4nD_j39to4c7u2ZVlJwkaES3ZDVmIZnfRNv5gzGS7jFVgVE')">
+<div class="bg-primary/90 text-black px-3 py-1 m-4 inline-block rounded font-bold text-xs uppercase tracking-tighter">AI &amp; ML</div>
+</div>
+<div class="p-6 flex flex-col grow">
+<p class="text-primary font-bold text-xs mb-2 tracking-widest uppercase">October 24, 2024</p>
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Neural Summit 2024</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-3">Deep dive into the latest transformer architectures and the future of LLMs in production environments.</p>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/80 text-black font-extrabold py-3 rounded-lg transition-all active:scale-95">Register Now</button>
+</div>
+</div>
+</div>
+<!-- Upcoming Card 2 -->
+<div class="flex flex-col bg-slate-50 dark:bg-primary/5 rounded-xl border border-slate-200 dark:border-primary/10 overflow-hidden hover:border-primary transition-all group">
+<div class="h-48 bg-cover bg-center" data-alt="Team brainstorming session with sticky notes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrL5BtqqDRONuXx0zi9O1SD_K40AWOx2Cu2_UFJ0WRgMid-1mSqJmFA47LAHI-fd9YQEKnBWGKs3WfGF24xli5t-ubPDP2UgqKkNxsS7YOthFGc-tJ9txAGZipaIDxo1a-TUJFHolHuqJbzYMrHYQS-z5-L3M4wGJgJCFiTbQTWtBd2RRbGXaLcN1NNP6F2Up4hk2dgjjfXU_HztgL8oU1NrZXIXSmpuT-c-AsxxfgQHXd6qH4KQRjzLervKBwy26eVC4hpSqtm4g')">
+<div class="bg-primary/90 text-black px-3 py-1 m-4 inline-block rounded font-bold text-xs uppercase tracking-tighter">Web Dev</div>
+</div>
+<div class="p-6 flex flex-col grow">
+<p class="text-primary font-bold text-xs mb-2 tracking-widest uppercase">November 12, 2024</p>
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">React Universe Workshop</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-3">Mastering Server Components and the new React Compiler. Hands-on labs with senior maintainers.</p>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/80 text-black font-extrabold py-3 rounded-lg transition-all active:scale-95">Register Now</button>
+</div>
+</div>
+</div>
+<!-- Upcoming Card 3 -->
+<div class="flex flex-col bg-slate-50 dark:bg-primary/5 rounded-xl border border-slate-200 dark:border-primary/10 overflow-hidden hover:border-primary transition-all group">
+<div class="h-48 bg-cover bg-center" data-alt="Blue circuit board futuristic design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDz_WtT9lok8kGLEinnEN7OiqH-shjUGvxtjiL0CyJusemfORA7KBEMkl_9XvRTvnSJu1FDixwRa7jc7hHeWGLs8ssQRF5ZVWgdsCfnjIVhWjOXox2T9kZWfpR4r_dx5Nph8JmSUzKLaZ-cY4s8mAmDUGeXHnUnN3Iw3EGSzvlDbQh_QMBSi6rHpnNT-hZGajODua6M8m0W4_k3S0iqblbSFPxeJYznOScourIXRgVH5c7one_La8wJyCGcviFByQV8Ah3Sz3iHxw8')">
+<div class="bg-primary/90 text-black px-3 py-1 m-4 inline-block rounded font-bold text-xs uppercase tracking-tighter">Security</div>
+</div>
+<div class="p-6 flex flex-col grow">
+<p class="text-primary font-bold text-xs mb-2 tracking-widest uppercase">December 05, 2024</p>
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Zero Trust Paradigm</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-3">A specialized session on modern authentication protocols and securing distributed microservices.</p>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/80 text-black font-extrabold py-3 rounded-lg transition-all active:scale-95">Register Now</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Past Events Section -->
+<section>
+<div class="flex items-center justify-between mb-8 border-b border-slate-200 dark:border-primary/10 pb-4">
+<h2 class="text-2xl font-bold">Past Events</h2>
+<span class="text-slate-500 text-sm font-semibold uppercase tracking-wider">Archive</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Past Card 1 -->
+<div class="flex flex-col bg-slate-100/50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-primary/5 overflow-hidden opacity-80 grayscale-[30%]">
+<div class="h-32 bg-cover bg-center" data-alt="Large auditorium with people during a talk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDz40oOFKnbciuMR0nBDVZKwwfF6vteVyR0xRCJwSe6heoU4FPu2TWxEdasurETR-hotZGCLYjNUUv2ZzaQoFzf_RAFL04zuiULU9KNl4pe3kD8KTv10BVPOdRioM6YnxrJ4_SQFy_lUDC1cyUvzwJzViHupaKHT_PecOslpaMxFi-erZcMdZkUFdQIOXXViGOvS7bZ3iARHf3KvDF_JwXsvAdf_BR8L8TIZvl6jk-rYALLDx7vv77CKFNbai5tWeYg1PtQ1sDl1_4')">
+<div class="bg-slate-700/80 text-white px-2 py-1 m-2 inline-block rounded text-[10px] font-bold uppercase">Cloud</div>
+</div>
+<div class="p-4 flex flex-col grow">
+<p class="text-slate-500 font-bold text-[10px] mb-1 uppercase">Sept 10, 2024</p>
+<h4 class="text-base font-bold mb-2">Serverless Expo</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4 line-clamp-2">Exploring edge computing and function optimization.</p>
+<div class="mt-auto">
+<button class="w-full bg-slate-200 dark:bg-slate-800 text-slate-500 font-bold py-2 rounded-md text-sm cursor-not-allowed" disabled="">Closed</button>
+</div>
+</div>
+</div>
+<!-- Past Card 2 -->
+<div class="flex flex-col bg-slate-100/50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-primary/5 overflow-hidden opacity-80 grayscale-[30%]">
+<div class="h-32 bg-cover bg-center" data-alt="Design tools and UI sketches on desk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-eOL50iSYAVoi9zdnmpsW1FeeffLxz0zVhnx6z_KzSqtVbfXXM1tFkXPCl3XuMEHHUiwfc-hO-mqHoA-1BwmqyQD5Y-KIvWV3NXG1TEMcXyuzrpwmMg8ehMFH6FwR7aXYbIPddd6vtMp-HnoAKdcClE9LH1ycYfrzB4kjTBJyGWTiA75Sv68eV4RPG1z-zLiSnO_FqK6zJESka7uHGOmzqwh-SkO900p0R_T5x6vkCFZ3yAUIZ2HNRUVEHWu633vEjjpWKyz8xjs')">
+<div class="bg-slate-700/80 text-white px-2 py-1 m-2 inline-block rounded text-[10px] font-bold uppercase">Design</div>
+</div>
+<div class="p-4 flex flex-col grow">
+<p class="text-slate-500 font-bold text-[10px] mb-1 uppercase">Aug 22, 2024</p>
+<h4 class="text-base font-bold mb-2">Figma to Code Day</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4 line-clamp-2">Workflow efficiency for modern design engineering teams.</p>
+<div class="mt-auto">
+<button class="w-full bg-slate-200 dark:bg-slate-800 text-slate-500 font-bold py-2 rounded-md text-sm cursor-not-allowed" disabled="">Closed</button>
+</div>
+</div>
+</div>
+<!-- Past Card 3 -->
+<div class="flex flex-col bg-slate-100/50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-primary/5 overflow-hidden opacity-80 grayscale-[30%]">
+<div class="h-32 bg-cover bg-center" data-alt="Data visualization graphs on screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8oc1xtQ-xeRFgw2y7nMb_GwxbrOdlZBpigeI4FOMMrgJZHzTH3kdwkmU4KFTLpYMcfrPu_m3hwk_nD-d-s4E1srCkeNp34Li8v0LAtuCap3rAWu3NGca7lh0Mf68vw65aaoCqWNsRerocYHCPown4X63Rdm1uVufKx6stKQ3QtyM5lv0NOtcNQcWSXL3oaEWF8dTPtx3DAGIXYWIrA3g6OxAEJ-yIdch1gg9nTHKBoQ9f_k2G3_b3T693zeJbMTM7eLbK9GLLdSE')">
+<div class="bg-slate-700/80 text-white px-2 py-1 m-2 inline-block rounded text-[10px] font-bold uppercase">Data Science</div>
+</div>
+<div class="p-4 flex flex-col grow">
+<p class="text-slate-500 font-bold text-[10px] mb-1 uppercase">July 15, 2024</p>
+<h4 class="text-base font-bold mb-2">Pandas &amp; Polars</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4 line-clamp-2">Comparative analysis of data manipulation libraries.</p>
+<div class="mt-auto">
+<button class="w-full bg-slate-200 dark:bg-slate-800 text-slate-500 font-bold py-2 rounded-md text-sm cursor-not-allowed" disabled="">Closed</button>
+</div>
+</div>
+</div>
+<!-- Past Card 4 -->
+<div class="flex flex-col bg-slate-100/50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-primary/5 overflow-hidden opacity-80 grayscale-[30%]">
+<div class="h-32 bg-cover bg-center" data-alt="React logo abstract pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMO_-IednAe5k61UYRCcD_cFNNdJ5NokClgD_LXAWFuWim4Mv0u1_wabcSsLJQu3UgXj_Tfq_96QB6GeMvJOers_2Jt1DsK4NSNgORcuYSmsrcS0bpSJ3f7AlJnowexmv_U5r9vewQBE3S9kCtd44J9iVBSPUU5D_0wvtFFI3W2pKW0IXHD82uF10tQNBon39o49tfWSppd77thSMliiPirhpTTAZaPq7eL3gRdBicvb4R3QgHtxSeg77nCPE1aqyRtKcOkXU8x6g')">
+<div class="bg-slate-700/80 text-white px-2 py-1 m-2 inline-block rounded text-[10px] font-bold uppercase">Web Dev</div>
+</div>
+<div class="p-4 flex flex-col grow">
+<p class="text-slate-500 font-bold text-[10px] mb-1 uppercase">June 02, 2024</p>
+<h4 class="text-base font-bold mb-2">The Remix Era</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4 line-clamp-2">Building full-stack apps with high performance standards.</p>
+<div class="mt-auto">
+<button class="w-full bg-slate-200 dark:bg-slate-800 text-slate-500 font-bold py-2 rounded-md text-sm cursor-not-allowed" disabled="">Closed</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12">
+<button class="flex items-center gap-2 px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary font-bold rounded-lg transition-all">
+                            View All Archive
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-20 border-t border-slate-200 dark:border-primary/10 py-10 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3 text-slate-500 dark:text-primary/70">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<span class="font-bold">Syntax</span>
+</div>
+<div class="text-sm text-slate-500">
+                        © 2024 Syntax. All rights reserved.
+                    </div>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">brand_family</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">terminal</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">hub</span></a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

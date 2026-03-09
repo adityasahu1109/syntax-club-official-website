@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Annual Hackathon 2023",
+    "date": "2023-11-15",
+    "location": "Main Hall",
+    "description": "Our biggest event of the year! 48 hours of building, learning, and collaborating.",
+    "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "id": 2,
+    "title": "Web Dev Workshop",
+    "date": "2024-02-10",
+    "location": "Lab 3",
+    "description": "Learn the basics of React and modern frontend development.",
+    "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "id": 3,
+    "title": "Algorithm Nights",
+    "date": "2024-03-05",
+    "location": "Room 204",
+    "description": "Weekly deep dive into complex algorithms and data structures.",
+    "imageUrl": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=600"
+  }
+]

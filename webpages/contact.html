@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#000000",
+                        "card-dark": "#111111",
+                        "border-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Contact Us | Coding Club</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="border-b border-border-dark bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Coding Club</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Events</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Team</a>
+<a class="text-sm font-medium text-primary" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-background-dark px-5 py-2 rounded font-bold text-sm tracking-wide hover:opacity-90 transition-opacity">
+                    Join Us
+                </button>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center py-12 px-6 lg:px-10">
+<div class="max-w-7xl w-full">
+<!-- Page Header -->
+<div class="mb-12 text-center md:text-left">
+<h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-4">CONNECT<span class="text-primary">.</span></h1>
+<p class="text-slate-400 text-lg max-w-xl">Have questions about our upcoming hackathons or partnerships? Our team is ready to help you scale your ideas.</p>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(300px,auto)]">
+<!-- Card 1: Outreach Lead -->
+<div class="md:col-span-7 lg:col-span-8 bg-card-dark rounded-xl border border-border-dark p-8 flex flex-col justify-between group hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start">
+<div class="space-y-4">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Leadership</span>
+<h3 class="text-3xl font-bold">Outreach Lead</h3>
+<div class="space-y-1">
+<p class="text-2xl font-medium text-slate-200">Alex Rivers</p>
+<p class="text-slate-500">Global Strategy &amp; Partnerships</p>
+</div>
+</div>
+<div class="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/20 bg-slate-800" data-alt="Professional headshot portrait of outreach lead Alex Rivers">
+<img alt="Alex Rivers" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKa7Oek5MRwrHTI2xdvUbQmn565Ftt83mrHNqsmBGQOCIw18oZSRqZCybqAx_BOUszdgpQ4vT1IhP4cCn4bCHDoAKkVsk-W4fxfWy_tt2fHUStMOdPGMK0P-LnsHm2Zc8oKs9LsaHaD-ttTzOaZNU2epYPVzMpOzHSfChjPMwdxS26cwN6mlwISG9-vcOJtoi_QP0EwvY2LqngoNvh9mEAK8n0I4vd1p5lt15tQdxaga2VXUi2DVGaaNM6e-xlJ09aDUQ_4VOK9DM"/>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 mt-8">
+<a class="flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-lg font-bold hover:bg-primary hover:text-background-dark transition-all" href="mailto:alex.rivers@codingclub.com">
+<span class="material-symbols-outlined text-xl">mail</span>
+                                alex.rivers@codingclub.com
+                            </a>
+<a class="flex items-center gap-2 bg-slate-900 text-slate-300 border border-border-dark px-6 py-3 rounded-lg font-bold hover:bg-slate-800 transition-all" href="tel:+15550123456">
+<span class="material-symbols-outlined text-xl">call</span>
+                                +1 (555) 012-3456
+                            </a>
+</div>
+</div>
+<!-- Card 2: Socials 2x2 Grid -->
+<div class="md:col-span-5 lg:col-span-4 bg-card-dark rounded-xl border border-border-dark p-4 grid grid-cols-2 grid-rows-2 gap-4">
+<a class="bg-background-dark rounded-lg flex flex-col items-center justify-center gap-2 border border-border-dark group hover:border-primary transition-all" href="#">
+<span class="text-slate-400 group-hover:text-primary transition-colors text-3xl font-bold">IG</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-600 font-bold">Instagram</span>
+</a>
+<a class="bg-background-dark rounded-lg flex flex-col items-center justify-center gap-2 border border-border-dark group hover:border-primary transition-all" href="#">
+<span class="text-slate-400 group-hover:text-primary transition-colors text-3xl font-bold">LI</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-600 font-bold">LinkedIn</span>
+</a>
+<a class="bg-background-dark rounded-lg flex flex-col items-center justify-center gap-2 border border-border-dark group hover:border-primary transition-all" href="#">
+<span class="text-slate-400 group-hover:text-primary transition-colors text-3xl font-bold">GH</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-600 font-bold">GitHub</span>
+</a>
+<a class="bg-background-dark rounded-lg flex flex-col items-center justify-center gap-2 border border-border-dark group hover:border-primary transition-all" href="#">
+<span class="text-slate-400 group-hover:text-primary transition-colors text-3xl font-bold">ML</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-600 font-bold">Newsletter</span>
+</a>
+</div>
+<!-- Card 3: Headquarters -->
+<div class="md:col-span-12 bg-card-dark rounded-xl border border-border-dark overflow-hidden flex flex-col lg:flex-row min-h-[400px]">
+<div class="p-8 lg:p-12 flex-1 flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Our Base</span>
+</div>
+<h3 class="text-4xl font-bold mb-6">Headquarters</h3>
+<div class="space-y-2 mb-8">
+<p class="text-xl text-slate-200">123 Tech Plaza</p>
+<p class="text-xl text-slate-200">Silicon Valley, CA 94025</p>
+<p class="text-slate-500">United States of America</p>
+</div>
+<button class="w-fit flex items-center gap-2 bg-slate-900 text-slate-300 border border-border-dark px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition-all">
+                                Get Directions
+                                <span class="material-symbols-outlined">north_east</span>
+</button>
+</div>
+<div class="lg:w-1/2 min-h-[300px] bg-slate-900 relative">
+<div class="absolute inset-0 grayscale opacity-40 hover:opacity-60 transition-opacity" data-alt="Minimal dark map showing Silicon Valley headquarters location" data-location="Silicon Valley" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8f_FW78EukLAkn5pZMJw-H7U44TieL9nI4_HxEzQoXTSLr18QRXrbckt-DJmPeJpjFiAz6Xs_mzdEWTkDLF9aoDGsWJB1w3E6Xi8_avngw8aAG4YGY8kMIjX-0wGV2wNwgh-FIOwa5rdqlMhUpBR0m4RFdfehMuX98Y6hgLIbEHzt-C4NHm_X5M_MoKAUlxPXfAlnbKTBsySSghXY2TkX15RHUEFb4K95PBbmsH4anctcvoqdGIzVkp4usIA4iEQJhmYeN7cbHcE"); background-size: cover; background-position: center;'></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center animate-pulse">
+<div class="w-4 h-4 bg-primary rounded-full shadow-[0_0_20px_#0dccf2]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-border-dark bg-background-dark py-12 px-6 lg:px-10 mt-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="text-primary opacity-50">
+<svg class="size-5" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<p class="text-sm font-bold text-slate-500 tracking-tight">© 2024 Coding Club. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-xs font-bold text-slate-600 hover:text-slate-400 uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="text-xs font-bold text-slate-600 hover:text-slate-400 uppercase tracking-widest" href="#">Terms of Service</a>
+<a class="text-xs font-bold text-slate-600 hover:text-slate-400 uppercase tracking-widest" href="#">Sponsors</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

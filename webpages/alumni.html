@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Syntax Alumni Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00ffff",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f2323",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-6 py-4 lg:px-20 bg-background-light dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">terminal</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tight uppercase">Syntax</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Directory</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Events</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Give</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">News</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-slate-200 dark:border-primary/20 bg-white dark:bg-slate-900/50">
+<div class="text-slate-400 dark:text-primary/60 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm placeholder:text-slate-400 dark:placeholder:text-primary/40" placeholder="Search alumni..." value=""/>
+</div>
+</label>
+<div class="bg-primary/20 border border-primary/30 rounded-full size-10 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile avatar smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIO5AwNJe9eSyzRPtqjxhy16dFCTVMxZpAgSeS3_Fz3ewQ9MmWUzG1bEfipRNa-uMQuHn2w40QEn2rRogI1-d-acmI5pp1C9gXsHt6soxTFwb5375367aW402N5aFAAclL0WaWOLKUL5XpqOeIBHTPXGspVScCKHK-TLAdcks9rZOTLjVEyzt1izQeb81d6TH8aJaDLkLibOPpZjYP1CuJP3VS3GehnH_O3dXhp1kFn0UmLhR4XRIgAsLIwBS5zXAdOuuY7R4Rjv4"/>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center px-6 py-12 lg:px-20">
+<div class="w-full max-w-5xl">
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-primary font-bold tracking-widest text-xs uppercase">Community Hub</span>
+<h1 class="text-slate-900 dark:text-slate-100 text-5xl font-black leading-tight tracking-tighter">
+                                Alumni <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">Plaques</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-xl">
+                                Honoring the pioneers and builders of the Syntax ecosystem. Our community spans across continents and disciplines.
+                            </p>
+</div>
+<div class="flex gap-2 shrink-0">
+<button class="px-4 py-2 bg-primary text-slate-900 font-bold rounded-lg hover:brightness-110 transition-all text-sm">Join Directory</button>
+<button class="px-4 py-2 bg-slate-200 dark:bg-primary/10 text-slate-700 dark:text-primary font-bold rounded-lg hover:bg-primary/20 transition-all text-sm border border-transparent dark:border-primary/20">Class of 2024</button>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 mb-10 overflow-x-auto pb-2 scrollbar-hide">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-slate-900 px-6 text-sm font-bold shadow-lg shadow-primary/20">All Classes</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-primary/20 px-6 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">Engineering</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-primary/20 px-6 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">Design</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-primary/20 px-6 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">Product</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-primary/20 px-6 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">Data Science</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center justify-between bg-white dark:bg-slate-900/40 p-5 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm hover:border-primary/40 transition-all group">
+<div class="flex items-center gap-5">
+<div class="relative size-16 rounded-lg overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
+<img class="w-full h-full object-cover" data-alt="Profile portrait of Alex Rivers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrKxzmAkvVyqksPM1KKlBtmVNKGQxTruRSr8Q5RIXkUoqAXRPLZRz0ti7nJDs-kFRP4AtXmI1QvMTAKILLSlO8YwJmCgSp9_o8jpweKape1H1qUH3iZy2Qd7BW5CGHS20e2iL8zt_st64i_YWqk26dw6iIaoTKtQlJlYjw9CVdafFqGaGiDn1ygTOFUFcpPNznFxW6p1OzHefdiJCWt3q0rGPl1Ay9sSQ7MpLYIUYA0AYfx4shwnJpI2DE2c3qa_UZb7X-ZsluidA"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold group-hover:text-primary transition-colors">Alex Rivers</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Class of 2018 | Software Architect</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">link</span>
+</a>
+</div>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-slate-900/40 p-5 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm hover:border-primary/40 transition-all group">
+<div class="flex items-center gap-5">
+<div class="relative size-16 rounded-lg overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
+<img class="w-full h-full object-cover" data-alt="Profile portrait of Sarah Chen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYYk_njVC8nCqnkJxYi8MwLuuP6IyuGqF1cvvqKHqur8d4_HDsJi8CRUXHLAtkeuNQ-6aq06xdfQzzz19JRvlxZoP5Dhzzf_MfqyzLKbNaRh_MMS-4FsZ07PAPTIaMNjI09uFoN6e-EdLmtua1YaWDwDs6iSNaqHIBwNUH5U1XoMijXUyeKL1X8WPnbivSvU-W76ZtWXq59fwNf2XGSHUk11weiuzqI5Eu8MRKByGOpM01SX5WeFiZSFKSQFMe9Vy3WEaGCcTWiWc"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold group-hover:text-primary transition-colors">Sarah Chen</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Class of 2020 | Lead Designer</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">link</span>
+</a>
+</div>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-slate-900/40 p-5 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm hover:border-primary/40 transition-all group">
+<div class="flex items-center gap-5">
+<div class="relative size-16 rounded-lg overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
+<img class="w-full h-full object-cover" data-alt="Profile portrait of Marcus Thorne" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOZRS1IHI6YBySnWoes48UarHEVYiLN89b4Zk9aT_3-ZkWUGZIVVFBCK1449OUVgmjO5tvl3l3-qSxhrDTqKqiEDj3HoxyxVMXO-fQdG84ppbN2xU5l11Ivbth63WNqHArKkcd05nOGxk-ISBzCn3_A8_cXMyxlIRSB0fv-Ryd4u3kMjIVsZtdOKHKRJVnkgSOkgbzv2YHjpBAtVx_8dkJEpCiAAjP_Z7g_BjBsJ0DoLMw0u92YMoxdGOOVcsyDCDAwOUWzBExe8A"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold group-hover:text-primary transition-colors">Marcus Thorne</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Class of 2017 | CTO @ FutureStack</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">link</span>
+</a>
+</div>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-slate-900/40 p-5 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm hover:border-primary/40 transition-all group">
+<div class="flex items-center gap-5">
+<div class="relative size-16 rounded-lg overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
+<img class="w-full h-full object-cover" data-alt="Profile portrait of Elena Rodriguez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnGRIOMY87TrEDQNgBcvFUzHwUtSSAoc5HmgPyVvRG70dqL6l3STEcPPgbxp6xQNH4OFHb7KMtaXekhvh1xhIaD7Frqle0Rf2A3I50UfmgXSFHZ9iDkL84C5yEQr6FD48LwD3qydpZOK4XbCsWT_ZgzB8q9ulU52csJdnf-dGNj5FhMiRUmdbCzzr_utqicKa9zuEigJV3kCLWYOqxBSUeUC-Jpuiyof94A1CnSAGcw1r2ccwwjC0WTq87GEisGYpX7x69FMnEhIk"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold group-hover:text-primary transition-colors">Elena Rodriguez</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Class of 2021 | Product Strategist</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">link</span>
+</a>
+</div>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-slate-900/40 p-5 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm hover:border-primary/40 transition-all group">
+<div class="flex items-center gap-5">
+<div class="relative size-16 rounded-lg overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
+<img class="w-full h-full object-cover" data-alt="Profile portrait of David Kim" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApaR5jlaCFxI6Sfl03G6Np8NhYiiSnrraJHnRUDSxDgjl2EuIvvmYMC05PZ_xKykzmSwrK2SBQrrnE8RxnX-OxBbgaaPGvx8q45D1LcAvBc5Y0GRpkAJ06ap23Tz-ruzwgJbTVAZaO5vLZ86Hup9jTJ527k4rIP4ieXuN7AlEqGbGQMlhicyBKMaHUfbkFcu7QhEgNBWjLXf0vBZxPbzhQFmCG3-ffG416D-6DQZdSgP6JHndMf-jut9B7p6wQ5CJdRQFme_fW69k"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold group-hover:text-primary transition-colors">David Kim</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Class of 2019 | Senior Engineer</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">link</span>
+</a>
+</div>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-slate-900/40 p-5 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm hover:border-primary/40 transition-all group">
+<div class="flex items-center gap-5">
+<div class="relative size-16 rounded-lg overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
+<img class="w-full h-full object-cover" data-alt="Profile portrait of Maya Jha" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDObmwHqRgNUJOprPbux0ma2GtVGRD5fMU4-VUVa-mWUAbGRb2auYlwyE0vK1ryCYRQnxSytSRwF-cQlY3vEvJYq5ywWd3__kOCe9kq9BWihYuH9zUqxyUBhbmkyE00tKnpwqGi0L1X6DVIpR0bc52bEPsBkSa1k5luRJ-i1NpLF-Bu1dh7LpvIAp-Xz2pEYE3lVXCkcHugSiJHpWKIBeZ6gTSGhAHnR5t_Cn_8mWHPIEboCo_i_jt1PbzXkT7Cjz9hHPp4Eub475I"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold group-hover:text-primary transition-colors">Maya Jha</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Class of 2022 | UX Researcher</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+<a class="size-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/5 text-slate-600 dark:text-primary/70 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">link</span>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-12 border-t border-slate-200 dark:border-primary/10">
+<div class="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-primary/10 dark:to-primary/5 p-8 md:p-12 rounded-3xl relative overflow-hidden text-center border border-primary/20">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="grid grid-cols-6 gap-4 transform -rotate-12 translate-y-12">
+<div class="h-24 bg-primary rounded-xl"></div>
+<div class="h-24 bg-primary rounded-xl opacity-50"></div>
+<div class="h-24 bg-primary rounded-xl"></div>
+<div class="h-24 bg-primary rounded-xl opacity-25"></div>
+<div class="h-24 bg-primary rounded-xl"></div>
+<div class="h-24 bg-primary rounded-xl opacity-75"></div>
+</div>
+</div>
+<h3 class="text-3xl font-black text-white dark:text-primary mb-4 relative z-10">Stay Connected</h3>
+<p class="text-slate-300 dark:text-slate-300 mb-8 max-w-lg mx-auto relative z-10">Get the latest news on Syntax alumni events, job boards, and networking opportunities delivered directly to your inbox.</p>
+<form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto relative z-10">
+<input class="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:ring-2 focus:ring-primary focus:border-transparent outline-none backdrop-blur-sm" placeholder="Email address" type="email"/>
+<button class="bg-primary text-slate-900 font-black py-3 px-8 rounded-xl hover:scale-105 active:scale-95 transition-transform" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-slate-200 dark:border-primary/10 py-10 px-6 lg:px-20 mt-auto">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<span class="text-slate-900 dark:text-slate-100 font-black uppercase text-sm tracking-widest">Syntax Alumni</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs">© 2024 Syntax Institute. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">help</span></a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

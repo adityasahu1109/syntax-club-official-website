@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00ffff",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f2323",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "techno": ["Inter", "sans-serif"] /* Using Inter with heavy weight to simulate techno/modern feel */
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Syntax - Team</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 py-4 md:px-10">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tighter uppercase">Syntax</h2>
+</div>
+<div class="flex gap-4">
+<nav class="hidden md:flex items-center gap-6 mr-6">
+<a class="text-sm font-bold text-primary" href="#">Home</a>
+<a class="text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border-b-2 border-primary" href="#">Team</a>
+</nav>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary text-background-dark">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center py-12 px-6">
+<div class="max-w-6xl w-full">
+<div class="mb-12 text-center md:text-left">
+<h1 class="text-slate-900 dark:text-slate-100 text-5xl md:text-6xl font-black leading-tight tracking-[-0.05em] uppercase italic">
+                            The <span class="text-primary">Architects</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mt-4">
+                            Building the digital infrastructure of tomorrow. Meet the minds behind the Syntax ecosystem.
+                        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<div class="flex flex-col items-center p-8 bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary transition-all group">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1 overflow-hidden">
+<div class="w-full h-full rounded-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Portrait of a male lead developer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAviYS0Lncx-tGrQWdtg4GoopNFrdXDmJUYSmWG3X260r5oDolC5Iol0HMRiKQFum8SW4s6WQrS4Bl0UXSC204nUPAhFVSDjnn2NKEjZ6jlO0mqFaGjUQDvWHXfaWmkxlsywolmiSmkv4ZjP_bhnjGWGE2HkoSvB0aJaAxWex25WHldXzTJ9Y1qMTfssZVrO-DsYI9kv9jxJcQx9w1ngdl6CU1SzDjRWnL1IDG_rlnoAbgb_RnBVXWvVf4H4F2waOKXB9MoPHclmqo')"></div>
+</div>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">Alex River</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 uppercase tracking-widest">Lead Developer</p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">code</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col items-center p-8 bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary transition-all group">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1 overflow-hidden">
+<div class="w-full h-full rounded-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Portrait of a female UI designer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbmTsUbw_bPSLEK42RsUqL4_HO2DaT57yq74ARstVMhbT2Mk1e1d_K-fcSzLDKPPvqOsvTOZQRfWobWPdmyRK8ajYJqEohgCBAbbIlOzHO47i3aj7GjRuu-J2yZHJws8TlXnMTLmU2eqhbCaVuXXNfeO9NHt6ae2XurWCBRmcgvKGoXIMFr9Vwjl6shQSmdXH3beFhYVuaOeKZGga4hUCdMBLD0gu-m_P9j9X3aeOZdodKEglH6VHYYQ5nrXO80EakVSoDWiMUHfU')"></div>
+</div>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">Sam Chen</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 uppercase tracking-widest">UI/UX Designer</p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">brush</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col items-center p-8 bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary transition-all group">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1 overflow-hidden">
+<div class="w-full h-full rounded-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Portrait of a backend engineer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgh7fOmfE-WWfjWhCrtR2PhK-1BD2jLYT4z5DFPfLHv1k3AN9jroKXDcRvSwMer1NHxgvWU0tVwtYnknuuc719PCfw7P1a_bwKjhShoE5MvKHDWmGVOL_MtQrQvZtDKjGMkuegHX4JFw4J19udPhlguFEvijfnyMigwDql7mWUeiekACuvLYZ-WabubkvVS4q_dj0XbaGsy5oVI5BwzKEjbCbSn4kDl0iU-PDopoJnqbLir3dorAmhds43oZD9-4tU8QhoIJtMZrA')"></div>
+</div>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">Jordan Smith</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 uppercase tracking-widest">Backend Engineer</p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">database</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col items-center p-8 bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary transition-all group">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1 overflow-hidden">
+<div class="w-full h-full rounded-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Portrait of a female product manager" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2yVZDt65gmF6ysHGuUcDbHYojv8-DEaOYVQKjlivNeXyjtlGaHUstg2q_WH_KBVLomvaW5HZWdR3gAhaQ-V_6HhTZtdVQytM5BWjbR9QB3_5rUtVB2W8mX3FhyqHk7wiA270op0tOUjsVapb488ZKkdQyf-yj6sjVCkhEphg0qWBDQZixXC6W_eigDNC8dwfoBiORBWQlQTW9tXRcSZPDFJJnvYbvMPtHrtpdsraefNq-cAeE-jJNeKBoZESYIvyFP6qVlWgrUmw')"></div>
+</div>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">Taylor Reed</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 uppercase tracking-widest">Product Manager</p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col items-center p-8 bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary transition-all group">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1 overflow-hidden">
+<div class="w-full h-full rounded-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Portrait of a male devops engineer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKGefrit-JKEpbp4059GHbQoBx5cdOUOsY373lqkwOtjoR3jxBhy-wDOynffksqErxKlbhoER0gp0sTldk-n1eyLqMwMPcDEcdqjU4AHDDh5DC4ZNwQrq-bGVJ7tsGp28sGmF-mvbmF3A_zw6W_-N7hIMM3PJE5zorz0wNW_0piooNPV1EdDjtA1byfEUeuUg9p7tqxw2GVQVdBVa7yspFAOU-WR-unOrqzLTa75wSyT_rcktzL259cqwhO0p5Q5axwZLIxDXiv48')"></div>
+</div>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">Casey Morgan</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 uppercase tracking-widest">DevOps Engineer</p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">terminal</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col items-center p-8 bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary transition-all group">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1 overflow-hidden">
+<div class="w-full h-full rounded-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Portrait of a female QA specialist" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBScIlxbmyDJME2-PmjvFVMy_uMlnMNRLzDhXBJonaFv9i_W2E13vb0GjJE1BKmVcfjQ-nk1WNAeZx6YbsEhAEtYIYqaLEW_Uy5EibldC1URQRrytE15EjTxnp-K2fgDGyhU9ViVVW2ZAbYWNvG0AatPw8iOELNfxyNNiG_UOmt66ighWyaZZs2f-1Ter1qamZxXBmcD-kBoo_GShrLqFEz-8QbKcYJK54Cs21f40ZzGa0D7PFe-M9CpFLPROfAn-_DodfJGrZtd9w')"></div>
+</div>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">Riley Lane</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 uppercase tracking-widest">QA Specialist</p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">bug_report</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col items-center p-8 bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary transition-all group">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1 overflow-hidden">
+<div class="w-full h-full rounded-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Portrait of a female security analyst" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAR3ZOudSgWoRaGpLqkbI7HqcBoC5L9HM6d_7L7YlnlemuNa4FY0m7twh8mDdCTq1fB-uJX7Y5gkm6Sxb6y3OUSbXx2Kw1hZy1hYTo7M_ChA3c8SsNkN8dVgkT767bmtxhBDNvgLXBzkXRZO8vQ129Q1ugyR2z4CJO2wd6y1kSw-xsyet7vwHQaxmi5A5GqdzLmlFKY18NVRWWmt6UePTmKm3IbrTqg40Wr7o2P0uKYBEx2oZyFL-3F3mbXED3NJDrp-_UuG0ob13U')"></div>
+</div>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">Jamie Voss</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 uppercase tracking-widest">Security Lead</p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">security</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col items-center p-8 bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary transition-all group">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1 overflow-hidden">
+<div class="w-full h-full rounded-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center" data-alt="Portrait of a female data scientist" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdnoE8ejn0PzLlMmEJWLyDP5bhvoannH7oYBbJ1AHXAS6vJrdA2dxpdD3nbqQrwwtq0lUxh8w-msgvKzVVThUnCnrZOgWaHx6sHfc94b55pCMZfqFKDQCh-0zcty-RJ2tmbI_Y0fDlBBqnVSl2AdXbZGPOxLhuyMU0Y8PrUcvVq6MuOsJ1OHTmwQkl60NBRhMX6o8VfvO1HCmjb-m2ToBQy_HmED6xHaReT-HphThN0BgcpJ5Hd_93TjBr0sWgbVoaBF34B5Bdaj8')"></div>
+</div>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">Morgan Day</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 uppercase tracking-widest">Data Scientist</p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">science</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-6">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">terminal</span>
+<p class="font-black uppercase italic tracking-tighter">Syntax System</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2024 Syntax Lab. All protocols active.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary text-sm font-bold uppercase tracking-widest transition-colors" href="#">Privacy</a>
+<a class="text-slate-500 hover:text-primary text-sm font-bold uppercase tracking-widest transition-colors" href="#">Log</a>
+<a class="text-slate-500 hover:text-primary text-sm font-bold uppercase tracking-widest transition-colors" href="#">Status</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

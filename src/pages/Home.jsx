@@ -1,4 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+const TAGLINES = [
+  'Ship code. Break limits.',
+  'Where ideas compile into reality.',
+  'Debug the ordinary. Deploy the extraordinary.',
+  'Built by coders. Driven by passion.',
+  'Think it. Code it. Ship it.',
+];
+
+const TypingTagline = () => {
+  const [lineIndex, setLineIndex] = useState(0);
+  const [displayed, setDisplayed] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = TAGLINES[lineIndex];
+    const speed = isDeleting ? 35 : 65;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplayed(current.slice(0, displayed.length + 1));
+        if (displayed.length + 1 === current.length) {
+          // Pause at full string then start deleting
+          setTimeout(() => setIsDeleting(true), 1800);
+        }
+      } else {
+        setDisplayed(current.slice(0, displayed.length - 1));
+        if (displayed.length - 1 === 0) {
+          setIsDeleting(false);
+          setLineIndex((prev) => (prev + 1) % TAGLINES.length);
+        }
+      }
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [displayed, isDeleting, lineIndex]);
+
+  return (
+    <span>
+      {displayed}
+      <span className="inline-block w-[2px] h-[1.1em] ml-0.5 bg-primary align-middle animate-[blink_0.8s_step-end_infinite]" />
+    </span>
+  );
+};
 
 const Home = () => {
   return (
@@ -16,8 +60,8 @@ const Home = () => {
           <h1 className="text-white text-5xl font-black leading-tight tracking-[-0.033em] md:text-7xl drop-shadow-lg">
             SyntaX
           </h1>
-          <h2 className="text-primary text-xl md:text-2xl font-medium leading-normal drop-shadow-[0_0_8px_rgba(6,245,249,0.5)]">
-            Build the future with code
+          <h2 className="text-primary text-xl md:text-2xl font-medium leading-normal drop-shadow-[0_0_8px_rgba(6,245,249,0.5)] min-h-[2em]">
+            <TypingTagline />
           </h2>
         </div>
       </div>

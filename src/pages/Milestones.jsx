@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import milestonesData from '../data/milestones.json';
+import useCountUp from '../hooks/useCountUp';
 
 const colorMap = {
   primary: {
@@ -18,6 +19,16 @@ const colorMap = {
     gradient: 'from-blue-400 to-primary',
     hoverBorder: 'hover:border-blue-400/40',
   },
+};
+
+const MileStat = ({ value, prefix = '', suffix = '', label }) => {
+  const { count, ref } = useCountUp(value);
+  return (
+    <div ref={ref} className="glass-card rounded-xl p-6 text-center">
+      <p className="text-3xl font-black text-primary mb-1">{prefix}{count}{suffix}</p>
+      <p className="text-slate-400 text-xs uppercase tracking-widest">{label}</p>
+    </div>
+  );
 };
 
 const Milestones = () => {
@@ -46,23 +57,11 @@ const Milestones = () => {
       </div>
 
       {/* Metrics */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 pt-8 border-t border-primary/10 text-center">
-        <div className="glass-card rounded-xl p-6">
-          <p className="text-3xl font-black text-primary mb-1">12</p>
-          <p className="text-slate-400 text-xs uppercase tracking-widest">Major Wins</p>
-        </div>
-        <div className="glass-card rounded-xl p-6">
-          <p className="text-3xl font-black text-primary mb-1">$45k+</p>
-          <p className="text-slate-400 text-xs uppercase tracking-widest">Prize Money</p>
-        </div>
-        <div className="glass-card rounded-xl p-6">
-          <p className="text-3xl font-black text-primary mb-1">200+</p>
-          <p className="text-slate-400 text-xs uppercase tracking-widest">Active Coders</p>
-        </div>
-        <div className="glass-card rounded-xl p-6">
-          <p className="text-3xl font-black text-primary mb-1">5</p>
-          <p className="text-slate-400 text-xs uppercase tracking-widest">Tech Summits</p>
-        </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 pt-8 border-t border-primary/10">
+        <MileStat value={12}  suffix="+"  label="Major Wins" />
+        <MileStat value={45}  prefix="$" suffix="k+" label="Prize Money" />
+        <MileStat value={200} suffix="+" label="Active Coders" />
+        <MileStat value={5}               label="Tech Summits" />
       </div>
 
       {/* Latest Achievement Spotlight — dynamically resolved */}

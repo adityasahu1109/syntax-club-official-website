@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import useCountUp from '../hooks/useCountUp';
 
 const TAGLINES = [
   'Ship code. Break limits.',
@@ -44,6 +45,17 @@ const TypingTagline = () => {
   );
 };
 
+const StatCard = ({ icon, label, value, suffix }) => {
+  const { count, ref } = useCountUp(value);
+  return (
+    <div ref={ref} className="flex min-w-[200px] flex-1 flex-col gap-3 rounded-2xl p-8 bg-white/5 dark:bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl items-center text-center hover:-translate-y-1 transition-transform">
+      <span className="material-symbols-outlined text-[32px] text-primary">{icon}</span>
+      <p className="text-slate-400 dark:text-slate-300 text-lg font-medium leading-normal">{label}</p>
+      <p className="text-slate-900 dark:text-white tracking-light text-4xl font-black leading-tight">{count}{suffix}</p>
+    </div>
+  );
+};
+
 const Home = () => {
   return (
     <div className="w-full">
@@ -69,21 +81,9 @@ const Home = () => {
       {/* Metrics Section */}
       <div className="w-full max-w-[1200px] mx-auto py-12">
         <div className="flex flex-wrap gap-6">
-          <div className="flex min-w-[200px] flex-1 flex-col gap-3 rounded-2xl p-8 bg-white/5 dark:bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl items-center text-center hover:-translate-y-1 transition-transform">
-            <span className="material-symbols-outlined text-[32px] text-primary">groups</span>
-            <p className="text-slate-400 dark:text-slate-300 text-lg font-medium leading-normal">Members</p>
-            <p className="text-slate-900 dark:text-white tracking-light text-4xl font-black leading-tight">250+</p>
-          </div>
-          <div className="flex min-w-[200px] flex-1 flex-col gap-3 rounded-2xl p-8 bg-white/5 dark:bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl items-center text-center hover:-translate-y-1 transition-transform">
-            <span className="material-symbols-outlined text-[32px] text-primary">event</span>
-            <p className="text-slate-400 dark:text-slate-300 text-lg font-medium leading-normal">Events</p>
-            <p className="text-slate-900 dark:text-white tracking-light text-4xl font-black leading-tight">50+</p>
-          </div>
-          <div className="flex min-w-[200px] flex-1 flex-col gap-3 rounded-2xl p-8 bg-white/5 dark:bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl items-center text-center hover:-translate-y-1 transition-transform">
-            <span className="material-symbols-outlined text-[32px] text-primary">rocket_launch</span>
-            <p className="text-slate-400 dark:text-slate-300 text-lg font-medium leading-normal">Projects</p>
-            <p className="text-slate-900 dark:text-white tracking-light text-4xl font-black leading-tight">120+</p>
-          </div>
+          <StatCard icon="groups"        label="Members"  value={250} suffix="+" />
+          <StatCard icon="event"         label="Events"   value={50}  suffix="+" />
+          <StatCard icon="rocket_launch" label="Projects" value={120} suffix="+" />
         </div>
       </div>
 

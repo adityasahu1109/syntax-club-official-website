@@ -95,59 +95,53 @@ const Milestones = () => {
       </div>
 
       {/* Vertical Timeline */}
-      <div className="relative">
-        {/* Central Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 timeline-line opacity-50 rounded-full" />
+      <div className="relative mt-8">
+        {/* Central Line (hidden on mobile, uses alternative styling below) */}
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 timeline-line opacity-50 rounded-full" />
+        {/* Mobile Line */}
+        <div className="md:hidden absolute left-6 h-full w-1 timeline-line opacity-50 rounded-full" />
 
-        <div className="space-y-24">
+        <div className="space-y-16 md:space-y-24">
           {sortedMilestones.map((milestone, index) => {
             const isLeft = index % 2 === 0;
             const c = colorMap[milestone.color] || colorMap.primary;
 
             return (
-              <div key={milestone.id} className="relative flex items-center justify-between w-full">
-                {/* Left side */}
-                {isLeft ? (
-                  <div className="hidden md:block w-5/12 pr-12 text-right">
-                    <div className={`glass-card p-6 rounded-xl ${c.hoverBorder} transition-all group`}>
-                      <span className={`${c.badge} text-xs font-bold tracking-widest uppercase mb-2 block`}>
-                        {milestone.label}
-                      </span>
-                      <h3 className="text-2xl font-bold mb-2">{milestone.title}</h3>
-                      <p className={`text-transparent bg-clip-text bg-gradient-to-r ${c.gradient} font-bold mb-4`}>
-                        {milestone.subtitle}
-                      </p>
-                      <p className="text-slate-400 text-sm leading-relaxed">{milestone.description}</p>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="w-full md:w-5/12 pr-12 md:block hidden" />
-                )}
-
-                {/* Center icon */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                  <div className={`w-12 h-12 rounded-full bg-background-dark ${c.border} border-4 flex items-center justify-center ${c.shadow}`}>
-                    <span className={`material-symbols-outlined ${c.text}`}>{milestone.icon}</span>
+              <div key={milestone.id} className="relative flex flex-col md:flex-row items-start md:items-center justify-between w-full pl-16 md:pl-0">
+                {/* Left side desktop */}
+                <div className={`hidden md:flex w-5/12 pr-12 justify-end ${!isLeft && 'invisible'}`}>
+                  <div className={`glass-card p-6 rounded-xl ${c.hoverBorder} transition-all group w-full text-right`}>
+                    <span className={`${c.badge} text-xs font-bold tracking-widest uppercase mb-2 block`}>
+                      {milestone.label}
+                    </span>
+                    <h3 className="text-2xl font-bold mb-2">{milestone.title}</h3>
+                    <p className={`text-transparent bg-clip-text bg-gradient-to-r ${c.gradient} font-bold mb-4`}>
+                      {milestone.subtitle}
+                    </p>
+                    <p className="text-slate-400 text-sm leading-relaxed">{milestone.description}</p>
                   </div>
                 </div>
 
-                {/* Right side */}
-                {!isLeft ? (
-                  <div className="w-full md:w-5/12 pl-12">
-                    <div className={`glass-card p-6 rounded-xl ${c.hoverBorder} transition-all`}>
-                      <span className={`${c.badge} text-xs font-bold tracking-widest uppercase mb-2 block`}>
-                        {milestone.label}
-                      </span>
-                      <h3 className="text-2xl font-bold mb-2">{milestone.title}</h3>
-                      <p className={`text-transparent bg-clip-text bg-gradient-to-r ${c.gradient} font-bold mb-4`}>
-                        {milestone.subtitle}
-                      </p>
-                      <p className="text-slate-400 text-sm leading-relaxed">{milestone.description}</p>
-                    </div>
+                {/* Center icon */}
+                <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 z-10 top-0 md:top-auto ml-2 md:ml-0">
+                  <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full bg-background-dark ${c.border} border-4 flex items-center justify-center ${c.shadow} mt-1 md:mt-0`}>
+                    <span className={`material-symbols-outlined text-lg md:text-xl ${c.text}`}>{milestone.icon}</span>
                   </div>
-                ) : (
-                  <div className="w-full md:w-5/12 pl-12 md:block hidden" />
-                )}
+                </div>
+
+                {/* Right side desktop AND Mobile default content */}
+                <div className={`w-full md:w-5/12 md:pl-12 ${isLeft ? 'md:hidden md:invisible' : ''}`}>
+                  <div className={`glass-card p-5 md:p-6 rounded-xl ${c.hoverBorder} transition-all group w-full`}>
+                    <span className={`${c.badge} text-xs font-bold tracking-widest uppercase mb-2 block`}>
+                      {milestone.label}
+                    </span>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2">{milestone.title}</h3>
+                    <p className={`text-transparent bg-clip-text bg-gradient-to-r ${c.gradient} font-bold mb-3 md:mb-4`}>
+                      {milestone.subtitle}
+                    </p>
+                    <p className="text-slate-400 text-sm leading-relaxed">{milestone.description}</p>
+                  </div>
+                </div>
               </div>
             );
           })}

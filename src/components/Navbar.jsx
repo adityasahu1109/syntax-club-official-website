@@ -17,9 +17,13 @@ const Navbar = () => {
   const navRef = useRef(null);
   const linkRefs = useRef({});
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, opacity: 0 });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Move the indicator whenever the route changes
+  // Move the indicator whenever the route changes (desktop only)
   useEffect(() => {
+    // Hide sliding indicator on mobile widths (< 1024px)
+    if (window.innerWidth < 1024) return;
+    
     const activeLink = linkRefs.current[location.pathname];
     const nav = navRef.current;
     if (!activeLink || !nav) return;
@@ -34,10 +38,42 @@ const Navbar = () => {
     });
   }, [location.pathname]);
 
+  // Handle window resize to recalculate indicator
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setIndicatorStyle(prev => ({ ...prev, opacity: 0 }));
+      } else {
+        // Trigger generic re-render calculation by dispatching a fake resize event if needed
+        // but simple toggle is enough for react
+        const activeLink = linkRefs.current[location.pathname];
+        const nav = navRef.current;
+        if (!activeLink || !nav) return;
+
+        const navRect = nav.getBoundingClientRect();
+        const linkRect = activeLink.getBoundingClientRect();
+
+        setIndicatorStyle({
+          left: linkRect.left - navRect.left,
+          width: linkRect.width,
+          opacity: 1,
+        });
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [location.pathname]);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   return (
     <header className="absolute top-0 left-0 right-0 z-50 w-full bg-transparent px-6 py-4">
-      <div className="max-w-7xl mx-auto flex items-center">
-        {/* Logo — left, fixed width so nav stays centred */}
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        
+        {/* Logo — left */}
         <div className="flex items-center gap-3 w-48 shrink-0">
           <Link to="/" className="flex items-center gap-3 group">
             <div className="bg-primary/90 p-1.5 rounded-lg group-hover:scale-105 transition-transform shadow-[0_0_10px_rgba(6,245,249,0.3)]">
@@ -47,8 +83,8 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Nav links — centred, with sliding underline indicator */}
-        <nav ref={navRef} className="relative flex flex-1 items-center justify-center gap-5 flex-wrap">
+        {/* Desktop Nav links — centred */}
+        <nav ref={navRef} className="hidden lg:flex relative flex-1 items-center justify-center gap-5 flex-wrap">
           {links.map(link => {
             const isActive = location.pathname === link.path;
             return (
@@ -65,7 +101,7 @@ const Navbar = () => {
             );
           })}
 
-          {/* Sliding underline */}
+          {/* Sliding underline (Desktop only) */}
           <span
             className="absolute bottom-0 h-[2px] bg-primary rounded-full pointer-events-none"
             style={{
@@ -77,8 +113,38 @@ const Navbar = () => {
           />
         </nav>
 
-        {/* Spacer mirrors logo width */}
-        <div className="w-48 shrink-0" />
+        {/* Mirror spacer for desktop central alignment */}
+        <div className="hidden lg:block w-48 shrink-0" />
+
+        {/* Mobile Hamburger Menu Button */}
+        <button 
+          className="lg:hidden p-2 text-white hover:text-primary transition-colors focus:outline-none"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <span className="material-symbols-outlined text-3xl">
+            {isMobileMenuOpen ? 'close' : 'menu'}
+          </span>
+        </button>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      <div className={`lg:hidden absolute top-full left-0 w-full bg-background-dark/95 backdrop-blur-xl border-b border-primary/20 transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <nav className="flex flex-col items-center py-6 px-6 gap-4">
+          {links.map(link => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`text-lg font-bold w-full text-center py-3 rounded-xl transition-colors ${
+                  isActive ? 'bg-primary/10 text-primary' : 'text-slate-300 hover:text-primary hover:bg-white/5'
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
+        </nav>
       </div>
     </header>
   );

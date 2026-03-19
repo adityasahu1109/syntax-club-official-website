@@ -135,9 +135,9 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
               varying vec3 vPosition;
 
               void main(void) {
-                float opacity = (96.0 - length(vPosition)) / 256.0 * 0.6;
-                // Theme color: primary #06f5f9 -> vec3(0.024, 0.960, 0.976)
-                vec3 color = vec3(0.024, 0.960, 0.976);
+                float opacity = (96.0 - length(vPosition)) / 256.0 * 0.85;
+                // Theme color: slightly darker cyan for better contrast -> vec3(0.016, 0.70, 0.71)
+                vec3 color = vec3(0.016, 0.70, 0.71);
                 gl_FragColor = vec4(color, opacity);
               }
             `,

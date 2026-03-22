@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import useCountUp from '../hooks/useCountUp';
 import FadeIn from '../components/FadeIn';
 import { GLSLHills } from '../components/ui/glsl-hills';
+import syntaxLogo from '../assets/syntax_logo.png';
 
 const TAGLINES = [
   'Ship code. Break limits.',
@@ -72,12 +73,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-primary/5 mix-blend-overlay pointer-events-none z-10"></div>
         <div className="relative z-10 flex flex-col gap-6 text-center max-w-3xl items-center px-6">
           <FadeIn direction="down" delay={200}>
-            <div className="size-24 rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 flex items-center justify-center text-primary mb-4 shadow-[0_0_30px_rgba(6,245,249,0.2)]">
-              <span className="material-symbols-outlined text-[48px]">terminal</span>
-            </div>
+            <img src={syntaxLogo} alt="SyntaX Logo" className="h-32 md:h-48 mb-4 w-auto object-contain drop-shadow-[0_0_30px_rgba(6,245,249,0.3)]" />
           </FadeIn>
           <FadeIn delay={400}>
-            <h1 className="text-white text-5xl font-black leading-tight tracking-[-0.033em] md:text-7xl drop-shadow-lg">
+            <h1 className="text-5xl font-black leading-tight tracking-[-0.033em] md:text-7xl bg-gradient-to-r from-[#0450db] to-[#8331d8] bg-clip-text text-transparent drop-shadow-[0_4px_30px_rgba(168,85,247,0.2)] pb-4">
               SyntaX
             </h1>
           </FadeIn>

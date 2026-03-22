@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import syntaxLogo from '../assets/syntax_logo.png';
 
 const links = [
   { name: 'Home',         path: '/' },
@@ -76,10 +77,8 @@ const Navbar = () => {
         {/* Logo — left */}
         <div className="flex items-center gap-3 w-48 shrink-0">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="bg-primary/90 p-1.5 rounded-lg group-hover:scale-105 transition-transform shadow-[0_0_10px_rgba(6,245,249,0.3)]">
-              <span className="material-symbols-outlined text-background-dark font-bold leading-none block text-[20px]">terminal</span>
-            </div>
-            <h1 className="text-xl font-black tracking-tight text-white group-hover:text-primary transition-colors">SyntaX</h1>
+            <img src={syntaxLogo} alt="SyntaX Logo" className="h-10 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-[0_0_10px_rgba(6,245,249,0.3)]" />
+            <h1 className="text-2xl font-black tracking-tight bg-gradient-to-r from-[#0450db] to-[#8331d8] bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">SyntaX</h1>
           </Link>
         </div>
 

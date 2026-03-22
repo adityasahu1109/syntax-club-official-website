@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import syntaxLogo from '../assets/syntax_logo.png';
 
 const socials = [
   {
@@ -51,11 +52,9 @@ const Footer = () => {
           
           {/* Column 1: Logo & Name */}
           <div className="flex flex-col gap-6 items-center text-center">
-            <Link to="/" className="flex items-center gap-3 group w-fit">
-              <div className="bg-primary/90 p-1.5 rounded-lg group-hover:scale-105 transition-transform shadow-[0_0_10px_rgba(6,245,249,0.3)]">
-                <span className="material-symbols-outlined text-background-dark font-bold leading-none block text-[24px]">terminal</span>
-              </div>
-              <span className="font-black text-2xl tracking-tight text-white group-hover:text-primary transition-colors">SyntaX</span>
+            <Link to="/" className="flex flex-col items-center gap-3 group w-fit">
+              <img src={syntaxLogo} alt="SyntaX Logo" className="h-16 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-[0_0_10px_rgba(6,245,249,0.3)]" />
+              <span className="font-black text-3xl tracking-tight bg-gradient-to-r from-[#0450db] to-[#8331d8] bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">SyntaX</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
               Empowering developers, building the future, and fostering innovation across the ecosystem.

@@ -67,15 +67,15 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 py-2.5">
-      {/* Glassmorphism navbar container */}
-      <div
-        className={`max-w-7xl mx-auto flex items-center justify-between rounded-2xl px-5 py-2.5 transition-all duration-500 ${
-          scrolled
-            ? 'bg-[rgba(3,7,18,0.65)] backdrop-blur-2xl border border-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_0_0_1px_rgba(255,255,255,0.03)]'
-            : 'bg-[rgba(3,7,18,0.4)] backdrop-blur-xl border border-white/[0.05] shadow-[0_4px_24px_rgba(0,0,0,0.2)]'
-        }`}
-      >
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 border-b ${
+        scrolled 
+          ? 'bg-background-dark/70 backdrop-blur-2xl border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] py-2' 
+          : 'bg-background-dark/40 backdrop-blur-xl border-transparent py-4'
+      }`}
+    >
+      {/* Glassmorphism full-width container */}
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 xl:px-8">
         {/* Logo */}
         <div className="flex items-center gap-2.5 w-44 shrink-0">
           <Link to="/" className="flex items-center gap-2.5 group">

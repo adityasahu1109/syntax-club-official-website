@@ -7,8 +7,8 @@ const Blogs = () => {
       <section className="mb-16">
         <div className="flex flex-col gap-2">
           <span className="text-primary font-bold tracking-widest text-xs uppercase">Knowledge Hub</span>
-          <h1 className="text-slate-900 dark:text-slate-100 text-5xl font-black leading-tight tracking-tighter">
-            Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Articles</span>
+          <h1 className="text-white text-4xl sm:text-5xl font-black leading-tight tracking-tighter">
+            Latest <span className="gradient-text">Articles</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl leading-relaxed mt-1">
             Deep dives, technical tutorials, and insights from the SyntaX community.
@@ -18,7 +18,7 @@ const Blogs = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogsData.map((blog) => (
-          <div key={blog.id} className="group flex flex-col bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-xl overflow-hidden shadow-[0_0_15px_rgba(6,245,249,0.05)] hover:border-primary/50 transition-colors">
+          <div key={blog.id} className="group flex flex-col bg-white/5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden shadow-[0_0_15px_rgba(6,245,249,0.05)] hover:border-primary/50 transition-colors">
             <div className="relative aspect-video overflow-hidden">
               <img 
                 src={blog.imageUrl} 
@@ -40,11 +40,11 @@ const Blogs = () => {
                 <span>{blog.author}</span>
               </div>
               
-              <h3 className="text-slate-900 dark:text-slate-100 text-2xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight">
+              <h3 className="text-white text-2xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight">
                 {blog.title}
               </h3>
               
-              <p className="text-slate-600 dark:text-slate-400 text-sm mb-8 flex-1 line-clamp-3">
+              <p className="text-slate-400 text-sm mb-8 flex-1 line-clamp-3">
                 {blog.excerpt}
               </p>
               

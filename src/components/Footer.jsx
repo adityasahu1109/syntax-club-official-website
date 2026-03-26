@@ -43,59 +43,59 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className="mt-20 border-t border-primary/10 bg-black/40 backdrop-blur-md relative overflow-hidden">
-      {/* Decorative gradient blur */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
-      
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <footer className="relative mt-0 border-t border-white/[0.06] overflow-hidden">
+      {/* Gradient top line */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+
+      {/* Background effect */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/95 to-transparent" />
+      <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-primary/5 blur-[100px]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          
+
           {/* Column 1: Logo & Name */}
-          <div className="flex flex-col gap-6 items-center text-center">
-            <Link to="/" className="flex flex-col items-center gap-3 group w-fit">
-              <img src={syntaxLogo} alt="SyntaX Logo" className="h-16 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-[0_0_10px_rgba(6,245,249,0.3)]" />
-              <span className="font-black text-3xl tracking-tight bg-gradient-to-r from-[#0450db] to-[#8331d8] bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">SyntaX</span>
+          <div className="flex flex-col gap-5 items-center text-center lg:items-start lg:text-left">
+            <Link to="/" className="flex items-center gap-3 group w-fit">
+              <img src={syntaxLogo} alt="SyntaX Logo" className="h-12 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
+              <span className="font-black text-2xl tracking-tight gradient-text-logo group-hover:opacity-80 transition-opacity">SyntaX</span>
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Empowering developers, building the future, and fostering innovation across the ecosystem.
+            <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
+              The premier coding club of VNIT Nagpur. Empowering developers, building the future.
             </p>
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="flex flex-col gap-4 items-center text-center">
-            <h3 className="text-white font-bold tracking-widest text-xs uppercase mb-2">Quick Links</h3>
-            <div className="flex flex-col gap-3 text-slate-400 text-sm font-medium items-center">
-              <Link className="hover:text-primary hover:translate-x-1 transition-all w-fit" to="/about">Our Team</Link>
-              <Link className="hover:text-primary hover:translate-x-1 transition-all w-fit" to="/projects">Open Source</Link>
-              <Link className="hover:text-primary hover:translate-x-1 transition-all w-fit" to="/events">Events</Link>
-              <Link className="hover:text-primary hover:translate-x-1 transition-all w-fit" to="/blogs">Articles</Link>
-              <Link className="hover:text-primary hover:translate-x-1 transition-all w-fit" to="/alumni">Alumni</Link>
+          <div className="flex flex-col gap-4 items-center text-center lg:items-start lg:text-left">
+            <h3 className="text-white font-bold tracking-widest text-xs uppercase mb-1">Navigate</h3>
+            <div className="flex flex-col gap-2.5 text-slate-500 text-sm font-medium">
+              <Link className="hover:text-primary transition-colors w-fit" to="/about">Our Team</Link>
+              <Link className="hover:text-primary transition-colors w-fit" to="/projects">Projects</Link>
+              <Link className="hover:text-primary transition-colors w-fit" to="/events">Events</Link>
+              <Link className="hover:text-primary transition-colors w-fit" to="/blogs">Blog</Link>
+              <Link className="hover:text-primary transition-colors w-fit" to="/alumni">Alumni</Link>
             </div>
           </div>
 
           {/* Column 3: Contact */}
-          <div className="flex flex-col gap-4 items-center text-center">
-            <h3 className="text-white font-bold tracking-widest text-xs uppercase mb-2">Contact</h3>
-            <div className="flex flex-col gap-4 text-sm text-slate-400 items-center">
-              <a href="mailto:hello@syntaxclub.com" className="flex items-center gap-3 hover:text-primary transition-colors group">
-                <span className="material-symbols-outlined text-lg opacity-70 group-hover:opacity-100">mail</span>
+          <div className="flex flex-col gap-4 items-center text-center lg:items-start lg:text-left">
+            <h3 className="text-white font-bold tracking-widest text-xs uppercase mb-1">Get in Touch</h3>
+            <div className="flex flex-col gap-3 text-sm text-slate-500">
+              <a href="mailto:hello@syntaxclub.com" className="flex items-center gap-2.5 hover:text-primary transition-colors group">
+                <span className="material-symbols-outlined text-base opacity-60 group-hover:opacity-100">mail</span>
                 hello@syntaxclub.com
               </a>
-              <a href="tel:+15550123456" className="flex items-center gap-3 hover:text-primary transition-colors group">
-                <span className="material-symbols-outlined text-lg opacity-70 group-hover:opacity-100">call</span>
-                +1 (555) 012-3456
-              </a>
-              <div className="flex items-start gap-3 mt-1 text-center justify-center">
-                <span className="material-symbols-outlined text-lg opacity-70 mt-0.5">location_on</span>
-                <span className="leading-relaxed">123 Tech Plaza,<br/>Silicon Valley, CA 94025</span>
+              <div className="flex items-center gap-2.5">
+                <span className="material-symbols-outlined text-base opacity-60">location_on</span>
+                <span>VNIT, Nagpur, India</span>
               </div>
             </div>
           </div>
 
-          {/* Column 4: Connect (Socials) */}
-          <div className="flex flex-col gap-4 items-center text-center">
-            <h3 className="text-white font-bold tracking-widest text-xs uppercase mb-2">Connect</h3>
-            <div className="flex flex-wrapjustify-center gap-3">
+          {/* Column 4: Connect */}
+          <div className="flex flex-col gap-4 items-center text-center lg:items-start lg:text-left">
+            <h3 className="text-white font-bold tracking-widest text-xs uppercase mb-1">Follow Us</h3>
+            <div className="flex flex-wrap gap-2.5">
               {socials.map((social) => (
                 <a
                   key={social.name}
@@ -103,24 +103,27 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={social.name}
-                  className="size-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-primary/10 hover:border-primary/30 hover:text-primary hover:scale-110 transition-all duration-300"
+                  className="size-10 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-center text-slate-500 hover:bg-primary/10 hover:border-primary/20 hover:text-primary hover:scale-110 transition-all duration-300"
                 >
                   {social.icon}
                 </a>
               ))}
             </div>
+            <p className="text-slate-600 text-xs mt-2">
+              Stay connected with our latest updates and stories.
+            </p>
           </div>
 
         </div>
 
         {/* Bottom Copyright Line */}
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-sm">
-            © 2026 SyntaX VNIT. All rights reserved.
+        <div className="mt-14 pt-6 border-t border-white/[0.04] flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-slate-600 text-xs">
+            © {new Date().getFullYear()} SyntaX VNIT. Crafted with <span className="text-primary">♥</span> and code.
           </p>
-          <div className="flex items-center gap-6 text-slate-500 text-sm">
+          <div className="flex items-center gap-5 text-slate-600 text-xs">
             <Link className="hover:text-primary transition-colors" to="#">Privacy Policy</Link>
-            <Link className="hover:text-primary transition-colors" to="#">Terms of Service</Link>
+            <Link className="hover:text-primary transition-colors" to="#">Terms</Link>
           </div>
         </div>
       </div>

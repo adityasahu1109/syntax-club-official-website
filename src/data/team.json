@@ -19,17 +19,17 @@
   },
   {
     "id": 3,
-    "name": "Abhinay Ragam",
-    "role": "Core head",
-    "imageUrl": "https://media.licdn.com/dms/image/v2/D5603AQEaI7sk_MoRig/profile-displayphoto-scale_200_200/B56ZxkwVLyG4AY-/0/1771216918021?e=1775692800&v=beta&t=4ZIG_WVVjMZg1FDHb8mIq47eEkJEiLkDKrfFFThDrvc",
-    "mailUrl": "mailto:abhinayragam@gmail.com",
-    "linkedinUrl": "https://www.linkedin.com/in/abhinay-ragam-1a7a99295",
+    "name": "Aritra Sarkar",
+    "role": "AIML Head",
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D4D03AQE60ogPmaoD6Q/profile-displayphoto-scale_200_200/B4DZrBbVcPJAAg-/0/1764181761792?e=1775692800&v=beta&t=38EzWIjFCrgINFV03pni72McpCeye_7KLH85coawVuo",
+    "mailUrl": "mailto:aritra.sarkar505@gmail.com",
+    "linkedinUrl": "https://www.linkedin.com/in/aritra-sarkar120320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "githubUrl": "#"
   },
   {
     "id": 4,
     "name": "Hrushikesh Musaloj",
-    "role": "App Dev Lead",
+    "role": "App Dev Head",
     "imageUrl": "https://media.licdn.com/dms/image/v2/D4D03AQHIKCeb9PiM1A/profile-displayphoto-scale_200_200/B4DZo.zSkLIAAY-/0/1761990228600?e=1775692800&v=beta&t=8e6X8Nrjg3TO56spNVk2yBDFLB4TcB9G5cuYhc90UNs",
     "mailUrl": "mailto:hrushikeshmusaloj@gmail.com",
     "linkedinUrl": "https://www.linkedin.com/in/hrushikeshmusaloj",
@@ -73,11 +73,11 @@
   },
   {
     "id": 9,
-    "name": "Aritra Sarkar",
-    "role": "AIML LEAD",
-    "imageUrl": "https://media.licdn.com/dms/image/v2/D4D03AQE60ogPmaoD6Q/profile-displayphoto-scale_200_200/B4DZrBbVcPJAAg-/0/1764181761792?e=1775692800&v=beta&t=38EzWIjFCrgINFV03pni72McpCeye_7KLH85coawVuo",
-    "mailUrl": "mailto:aritra.sarkar505@gmail.com",
-    "linkedinUrl": "https://www.linkedin.com/in/aritra-sarkar120320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "name": "Abhinay Ragam",
+    "role": "Core Head",
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D5603AQEaI7sk_MoRig/profile-displayphoto-scale_200_200/B56ZxkwVLyG4AY-/0/1771216918021?e=1775692800&v=beta&t=4ZIG_WVVjMZg1FDHb8mIq47eEkJEiLkDKrfFFThDrvc",
+    "mailUrl": "mailto:abhinayragam@gmail.com",
+    "linkedinUrl": "https://www.linkedin.com/in/abhinay-ragam-1a7a99295",
     "githubUrl": "#"
   }
 ]

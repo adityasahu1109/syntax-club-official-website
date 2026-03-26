@@ -73,12 +73,14 @@ const CustomCursor = () => {
     document.addEventListener('mouseover', handleMouseOver);
     animFrame = requestAnimationFrame(animate);
 
-    // Add cursor:none to body
+    // Add cursor:none to body with media query safeguard
     document.body.style.cursor = 'none';
     const style = document.createElement('style');
     style.id = 'custom-cursor-style';
     style.textContent = `
-      *, *::before, *::after { cursor: none !important; }
+      @media (hover: hover) and (pointer: fine) {
+        *, *::before, *::after { cursor: none !important; }
+      }
     `;
     document.head.appendChild(style);
 

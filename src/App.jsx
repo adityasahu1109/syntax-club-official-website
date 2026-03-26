@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import CustomCursor from './components/ui/CustomCursor';
+import GlobalBackground from './components/ui/GlobalBackground';
 
 // Pages
 import Home from './pages/Home';
@@ -20,7 +21,8 @@ function App() {
     <Router>
       <CustomCursor />
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
+      <GlobalBackground />
+      <div className="relative z-10 flex flex-col min-h-screen text-white w-full">
         <Navbar />
         <main className="flex-1 w-full flex flex-col items-center">
           <Routes>

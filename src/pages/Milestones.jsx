@@ -48,8 +48,8 @@ const Milestones = () => {
       {/* Page Header */}
       <div className="text-center mb-12">
         <span className="text-primary font-bold tracking-widest text-xs uppercase">Track Record</span>
-        <h1 className="text-slate-900 dark:text-slate-100 text-5xl font-black leading-tight tracking-tighter mt-2">
-          Legacy of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Excellence</span>
+        <h1 className="text-white text-4xl sm:text-5xl font-black leading-tight tracking-tighter mt-2">
+          Legacy of <span className="gradient-text">Excellence</span>
         </h1>
         <p className="text-slate-400 max-w-2xl mx-auto text-lg mt-4">
           Tracking our journey from early prototypes to international recognition. Every milestone represents thousands of hours of dedication.

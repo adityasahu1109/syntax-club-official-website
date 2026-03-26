@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import useCountUp from '../hooks/useCountUp';
 import FadeIn from '../components/FadeIn';
-import HeroScene from '../components/ui/HeroScene';
 import GridBackground from '../components/ui/GridBackground';
 import syntaxLogo from '../assets/syntax_logo.png';
 
@@ -77,7 +76,7 @@ const StatCard = ({ icon, label, value, suffix }) => {
 const FeatureCard = ({ icon, title, description, delay = 0, gradient }) => {
   return (
     <FadeIn delay={delay} direction="up" className="h-full">
-      <div className="group relative h-full glass-card rounded-2xl p-8 glass-card-hover overflow-hidden">
+      <div className="group relative h-full glass-card rounded-2xl p-6 sm:p-8 glass-card-hover overflow-hidden">
         {/* Background glow on hover */}
         <div className={`absolute -top-20 -right-20 w-40 h-40 rounded-full blur-[60px] opacity-0 group-hover:opacity-30 transition-opacity duration-700 ${gradient}`} />
 
@@ -175,7 +174,7 @@ const CTASection = () => (
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Open for Recruitment
           </span>
-          <h2 className="text-white text-3xl md:text-5xl font-black tracking-tight leading-tight max-w-2xl">
+          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-2xl">
             Ready to write the next <span className="gradient-text">chapter</span>?
           </h2>
           <p className="text-slate-400 text-lg max-w-xl leading-relaxed">
@@ -211,39 +210,33 @@ const CTASection = () => (
 const Home = () => {
   return (
     <div className="w-full overflow-hidden">
-      {/* ========== HERO SECTION ========== */}
-      <div className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        {/* 3D Background */}
-        <HeroScene />
-
-        {/* Overlay gradients */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background-dark/30 via-transparent to-background-dark z-[1]" />
-        <div className="absolute inset-0 mesh-gradient z-[1]" />
+      {/* ========== HERO SECTION (Backgrounds moved globally) ========== */}
+      <div className="relative w-full min-h-[100dvh] flex flex-col items-center pt-32 pb-16">
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col gap-8 text-center max-w-4xl items-center px-6">
+        <div className="relative z-10 flex flex-col gap-8 text-center max-w-4xl items-center px-6 my-auto w-full">
           <FadeIn direction="down" delay={100}>
             <div className="relative">
               <img
                 src={syntaxLogo}
                 alt="SyntaX Logo"
-                className="h-28 md:h-40 w-auto object-contain drop-shadow-[0_0_60px_rgba(59,130,246,0.4)] animate-float-slow"
+                className="h-24 md:h-32 lg:h-40 w-auto object-contain drop-shadow-[0_0_60px_rgba(59,130,246,0.4)] animate-float-slow"
               />
               {/* Logo glow effect */}
               <div className="absolute inset-0 blur-[40px] opacity-30">
-                <img src={syntaxLogo} alt="" className="h-28 md:h-40 w-auto object-contain" />
+                <img src={syntaxLogo} alt="" className="h-24 md:h-32 lg:h-40 w-auto object-contain" />
               </div>
             </div>
           </FadeIn>
 
           <FadeIn delay={300}>
-            <h1 className="text-6xl md:text-8xl font-black tracking-[-0.04em] leading-[0.9]">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-[-0.04em] leading-[0.9]">
               <span className="gradient-text-logo">SyntaX</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={500}>
-            <p className="text-slate-400 text-base md:text-lg font-medium max-w-lg leading-relaxed">
+            <p className="text-slate-400 text-base md:text-lg font-medium max-w-lg leading-relaxed px-4">
               The premier coding club of <span className="text-white font-semibold">VNIT Nagpur</span>.
               Building the future, one commit at a time.
             </p>
@@ -259,7 +252,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <a
                 href="/contact"
-                className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-white overflow-hidden transition-all duration-300 hover:shadow-glow-blue"
+                className="group relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-white overflow-hidden transition-all duration-300 hover:shadow-glow-blue"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-purple" />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -268,21 +261,13 @@ const Home = () => {
               </a>
               <a
                 href="/projects"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-slate-300 border border-white/10 hover:border-primary/40 hover:bg-white/5 hover:text-white transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-slate-300 border border-white/10 hover:border-primary/40 hover:bg-white/5 hover:text-white transition-all duration-300"
               >
                 View Projects
                 <span className="material-symbols-outlined text-lg">code</span>
               </a>
             </div>
           </FadeIn>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-fade-in" style={{ animationDelay: '1.5s' }}>
-          <span className="text-slate-500 text-xs uppercase tracking-widest font-medium">Scroll</span>
-          <div className="w-5 h-8 rounded-full border-2 border-slate-600 flex justify-center pt-1.5">
-            <div className="w-1 h-2 rounded-full bg-primary animate-bounce" />
-          </div>
         </div>
       </div>
 
@@ -318,7 +303,7 @@ const Home = () => {
           <FadeIn direction="up">
             <div className="flex flex-col gap-3 text-center items-center mb-16">
               <span className="text-primary text-sm font-semibold uppercase tracking-widest">About Us</span>
-              <h2 className="text-white tracking-tight text-4xl md:text-5xl font-black leading-tight">
+              <h2 className="text-white tracking-tight text-3xl sm:text-4xl md:text-5xl font-black leading-tight">
                 What makes <span className="gradient-text">SyntaX</span> different
               </h2>
               <p className="text-slate-400 text-lg max-w-2xl leading-relaxed mt-2">
@@ -359,7 +344,7 @@ const Home = () => {
           <FadeIn direction="up">
             <div className="flex flex-col gap-3 text-center items-center mb-12">
               <span className="text-primary text-sm font-semibold uppercase tracking-widest">Gallery</span>
-              <h2 className="text-white text-4xl md:text-5xl font-black tracking-tight">
+              <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
                 Life at <span className="gradient-text">SyntaX</span>
               </h2>
             </div>

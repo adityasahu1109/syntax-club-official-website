@@ -40,8 +40,8 @@ const Contact = () => {
           <div className="mb-12 text-center md:text-left flex flex-col items-center md:items-start">
             <div className="flex flex-col gap-2 items-center md:items-start">
               <span className="text-primary font-bold tracking-widest text-xs uppercase">Get In Touch</span>
-              <h1 className="text-slate-900 dark:text-slate-100 text-3xl md:text-5xl font-black leading-tight tracking-tighter">
-                Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Connect</span>
+              <h1 className="text-white text-4xl sm:text-5xl leading-tight font-black tracking-tighter">
+                Let's <span className="gradient-text">Connect</span>
               </h1>
               <p className="text-slate-400 text-lg max-w-xl mt-1">Have questions about our upcoming hackathons or partnerships? Our team is ready to help.</p>
             </div>
@@ -52,13 +52,13 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(300px,auto)]">
           {/* Card 1: Outreach Lead */}
           <FadeIn direction="up" delay={100} className="md:col-span-7 lg:col-span-8 h-full flex w-full">
-            <div className="w-full bg-black/20 dark:bg-white/5 rounded-xl border border-slate-200 dark:border-white/10 p-8 flex flex-col justify-between group hover:border-primary/50 transition-colors backdrop-blur-sm">
+            <div className="w-full bg-black/20 bg-white/5 rounded-xl border border-white/10 p-8 flex flex-col justify-between group hover:border-primary/50 transition-colors backdrop-blur-sm">
               <div className="flex justify-between items-start">
                 <div className="space-y-4">
                   <span className="text-primary text-xs font-bold uppercase tracking-widest">Leadership</span>
                   <h3 className="text-3xl font-bold">Outreach Lead</h3>
                   <div className="space-y-1">
-                    <p className="text-2xl font-medium text-slate-900 dark:text-slate-200">Alex Rivers</p>
+                    <p className="text-2xl font-medium text-slate-200">Alex Rivers</p>
                     <p className="text-slate-600 dark:text-slate-500">Global Strategy &amp; Partnerships</p>
                   </div>
                 </div>
@@ -69,9 +69,9 @@ const Contact = () => {
               <div className="flex flex-wrap gap-4 mt-8">
                 <a className="flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-lg font-bold hover:bg-primary hover:text-white dark:hover:text-background-dark transition-all" href="mailto:alex.rivers@codingclub.com">
                   <span className="material-symbols-outlined text-xl">mail</span>
-                  alex.rivers@codingclub.com
+                  <span className="break-all">alex.rivers@codingclub.com</span>
                 </a>
-                <a className="flex items-center gap-2 bg-slate-200 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-white/10 px-6 py-3 rounded-lg font-bold hover:bg-slate-300 dark:hover:bg-slate-800 transition-all" href="tel:+15550123456">
+                <a className="flex items-center gap-2 bg-black/40 border-white/5 border text-slate-300 border border-slate-300 border-white/10 px-6 py-3 rounded-lg font-bold hover:bg-slate-300 dark:hover:bg-slate-800 transition-all" href="tel:+15550123456">
                   <span className="material-symbols-outlined text-xl">call</span>
                   +1 (555) 012-3456
                 </a>
@@ -81,16 +81,16 @@ const Contact = () => {
 
           {/* Card 2: Socials 2×2 Grid — real icons */}
           <FadeIn direction="up" delay={200} className="md:col-span-5 lg:col-span-4 h-full flex w-full">
-            <div className="w-full bg-black/20 dark:bg-white/5 backdrop-blur-sm rounded-xl border border-slate-200 dark:border-white/10 p-4 grid grid-cols-2 grid-rows-2 gap-4">
+            <div className="w-full bg-black/20 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-4 grid grid-cols-2 grid-rows-2 gap-4">
               {socials.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/50 dark:bg-background-dark rounded-lg flex flex-col items-center justify-center gap-2 border border-slate-200 dark:border-white/10 group hover:border-primary transition-all backdrop-blur-sm"
+                  className="bg-white/50 dark:bg-background-dark rounded-lg flex flex-col items-center justify-center gap-2 border border-white/10 group hover:border-primary transition-all backdrop-blur-sm"
                 >
-                  <span className="text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
+                  <span className="text-slate-400 group-hover:text-primary transition-colors">
                     {social.icon}
                   </span>
                   <span className="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-600 font-bold">
@@ -103,7 +103,7 @@ const Contact = () => {
 
           {/* Card 3: Headquarters */}
           <FadeIn direction="up" delay={300} className="md:col-span-12 h-full flex w-full">
-            <div className="w-full bg-black/20 dark:bg-white/5 backdrop-blur-sm rounded-xl border border-slate-200 dark:border-white/10 overflow-hidden flex flex-col lg:flex-row min-h-[400px]">
+            <div className="w-full bg-black/20 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden flex flex-col lg:flex-row min-h-[400px]">
               <div className="p-8 lg:p-12 flex-1 flex flex-col justify-center">
                 <div className="flex items-center gap-2 mb-6">
                   <span className="material-symbols-outlined text-primary text-3xl">location_on</span>
@@ -111,16 +111,16 @@ const Contact = () => {
                 </div>
                 <h3 className="text-4xl font-bold mb-6">Headquarters</h3>
                 <div className="space-y-2 mb-8">
-                  <p className="text-xl text-slate-900 dark:text-slate-200">123 Tech Plaza</p>
-                  <p className="text-xl text-slate-900 dark:text-slate-200">Silicon Valley, CA 94025</p>
+                  <p className="text-xl text-slate-200">123 Tech Plaza</p>
+                  <p className="text-xl text-slate-200">Silicon Valley, CA 94025</p>
                   <p className="text-slate-600 dark:text-slate-500">United States of America</p>
                 </div>
-                <button className="w-fit flex items-center gap-2 bg-slate-200 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-white/10 px-8 py-4 rounded-lg font-bold hover:bg-slate-300 dark:hover:bg-slate-800 transition-all">
+                <button className="w-fit flex items-center gap-2 bg-black/40 border-white/5 border text-slate-300 border border-slate-300 border-white/10 px-8 py-4 rounded-lg font-bold hover:bg-slate-300 dark:hover:bg-slate-800 transition-all">
                   Get Directions
                   <span className="material-symbols-outlined">north_east</span>
                 </button>
               </div>
-              <div className="w-full lg:w-1/2 min-h-[300px] bg-slate-200 dark:bg-slate-900 relative">
+              <div className="w-full lg:w-1/2 min-h-[300px] bg-black/40 border-white/5 border relative">
                 <div className="absolute inset-0 grayscale opacity-40 hover:opacity-60 transition-opacity" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8f_FW78EukLAkn5pZMJw-H7U44TieL9nI4_HxEzQoXTSLr18QRXrbckt-DJmPeJpjFiAz6Xs_mzdEWTkDLF9aoDGsWJB1w3E6Xi8_avngw8aAG4YGY8kMIjX-0wGV2wNwgh-FIOwa5rdqlMhUpBR0m4RFdfehMuX98Y6hgLIbEHzt-C4NHm_X5M_MoKAUlxPXfAlnbKTBsySSghXY2TkX15RHUEFb4K95PBbmsH4anctcvoqdGIzVkp4usIA4iEQJhmYeN7cbHcE")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center animate-pulse">

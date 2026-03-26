@@ -10,10 +10,10 @@ const Team = () => {
           <div className="mb-12 text-center md:text-left flex flex-col items-center md:items-start">
             <div className="flex flex-col gap-2 items-center md:items-start">
               <span className="text-primary font-bold tracking-widest text-xs uppercase">Core Members</span>
-              <h1 className="text-slate-900 dark:text-slate-100 text-4xl md:text-5xl font-black leading-tight tracking-tighter">
-                The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Architects</span>
+              <h1 className="text-white text-4xl sm:text-5xl leading-tight font-black tracking-tighter">
+                The <span className="gradient-text">Architects</span>
               </h1>
-              <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg max-w-2xl mt-1">
+              <p className="text-slate-400 text-base md:text-lg max-w-2xl mt-1">
                 Building the digital infrastructure of tomorrow. Meet the minds behind the SyntaX ecosystem.
               </p>
             </div>
@@ -22,16 +22,16 @@ const Team = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {teamData.map((member, index) => (
             <FadeIn key={member.id} delay={index * 100} direction="up" className="h-full">
-              <div className="flex flex-col h-full items-center p-6 bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary transition-all group">
+              <div className="flex flex-col h-full items-center p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl hover:border-primary transition-all group">
                 <div className="relative mb-5">
                   <div className="w-28 h-28 rounded-full border-4 border-primary p-1 overflow-hidden">
-                    <div className="w-full h-full rounded-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center" style={{ backgroundImage: `url('${member.imageUrl}')` }}></div>
+                    <div className="w-full h-full rounded-full bg-white/5 border-white/10 border text-white bg-cover bg-center" style={{ backgroundImage: `url('${member.imageUrl}')` }}></div>
                   </div>
                 </div>
-                <h3 className="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">
+                <h3 className="text-white text-xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 uppercase tracking-widest text-center">
+                <p className="text-slate-400 text-sm font-medium mt-1 uppercase tracking-widest text-center">
                   {member.role}
                 </p>
                 <div className="flex gap-4 mt-6">

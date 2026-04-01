@@ -1,32 +1,12 @@
 [
   {
-    "id": 1,
-    "title": "Campus Explorer",
+    "id": 1775060268655,
+    "title": "IG App 2026",
     "category": "Mobile App",
-    "description": "A navigation app to help freshers find their way around the campus with live indoor mapping and event-aware routing.",
-    "imageUrl": "https://images.unsplash.com/photo-1526304640581-d334cdbdf45e?auto=format&fit=crop&q=80&w=600",
-    "liveUrl": "https://campusexplorer.example.com",
-    "githubUrl": "#",
-    "blogUrl": "#"
-  },
-  {
-    "id": 2,
-    "title": "Study Buddy Matcher",
-    "category": "Web App",
-    "description": "Platform connecting students based on their enrolled courses, study habits, and availability windows.",
-    "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
-    "liveUrl": null,
-    "githubUrl": "#",
-    "blogUrl": "#"
-  },
-  {
-    "id": 3,
-    "title": "Auto Grader Bot",
-    "category": "Tool",
-    "description": "A Discord bot that automates assignment evaluation, plagiarism checks, and generates detailed feedback reports.",
-    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600",
-    "liveUrl": null,
-    "githubUrl": "#",
-    "blogUrl": "#"
+    "description": "IG is an event of vnit \n\nwe made an app to track activities of all departments during that event",
+    "imageUrl": "https://www.google.com/imgres?q=ig%20app&imgurl=https%3A%2F%2Fplay-lh.googleusercontent.com%2FVRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM&imgrefurl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.instagram.android&docid=cFO6uq8dkuj2HM&tbnid=L8ciPaugYZDGyM&vet=12ahUKEwjJ_pCKh82TAxXYgFYBHRcnI-UQnPAOegQIGBAB..i&w=512&h=512&hcb=2&ved=2ahUKEwjJ_pCKh82TAxXYgFYBHRcnI-UQnPAOegQIGBAB",
+    "liveUrl": "",
+    "githubUrl": "",
+    "blogUrl": ""
   }
 ]

@@ -1,8 +1,19 @@
-import React from 'react';
-import alumniData from '../data/alumni.json';
+import React, { useState, useEffect } from 'react';
+import { supabase } from '../lib/supabase.js';
 import FadeIn from '../components/FadeIn';
 
 const Alumni = () => {
+  const [alumniData, setAlumniData] = useState([]);
+
+  useEffect(() => {
+    async function getAlumni() {
+      const { data, error } = await supabase.from('alumni').select('*').order('graduationYear', { ascending: false });
+      if (error) console.error(error);
+      else setAlumniData(data);
+    }
+    getAlumni();
+  }, []);
+
   return (
     <div className="flex-1 flex flex-col items-center px-6 py-12 lg:px-20 overflow-hidden">
       <div className="w-full max-w-5xl">

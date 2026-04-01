@@ -1,8 +1,23 @@
-import React from 'react';
-import teamData from '../data/team.json';
+import React, { useState, useEffect } from 'react';
+import { supabase } from '../lib/supabase.js';
 import FadeIn from '../components/FadeIn';
 
 const Team = () => {
+  const [teamData, setTeamData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function getTeam() {
+      // By default order by id or fetch everything. 
+      // If we want hierarchy without order_id, we just fetch them as is. They were ordered randomly anyway.
+      const { data, error } = await supabase.from('team').select('*');
+      if (error) console.error(error);
+      else setTeamData(data);
+      setLoading(false);
+    }
+    getTeam();
+  }, []);
+
   return (
     <div className="flex-1 flex flex-col items-center py-12 px-6 overflow-hidden">
       <div className="max-w-6xl w-full">

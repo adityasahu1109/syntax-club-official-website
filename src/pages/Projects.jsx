@@ -1,8 +1,21 @@
-import React from 'react';
-import projectsData from '../data/projects.json';
+import React, { useState, useEffect } from 'react';
+import { supabase } from '../lib/supabase.js';
 import FadeIn from '../components/FadeIn';
 
 const Projects = () => {
+  const [projectsData, setProjectsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function getProjects() {
+      const { data, error } = await supabase.from('projects').select('*');
+      if (error) console.error(error);
+      else setProjectsData(data);
+      setLoading(false);
+    }
+    getProjects();
+  }, []);
+
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-20 py-12 w-full overflow-hidden">
       {/* Header */}

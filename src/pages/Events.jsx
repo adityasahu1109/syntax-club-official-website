@@ -1,12 +1,22 @@
-import React, { useState, useMemo } from 'react';
-import eventsData from '../data/events.json';
+import React, { useState, useMemo, useEffect } from 'react';
+import { supabase } from '../lib/supabase.js';
 import FadeIn from '../components/FadeIn';
 
 const CATEGORIES = ['All', 'Workshop', 'Seminar', 'Competition'];
 
 const Events = () => {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [eventsData, setEventsData] = useState([]);
   const today = new Date();
+
+  useEffect(() => {
+    async function getEvents() {
+      const { data, error } = await supabase.from('events').select('*');
+      if (error) console.error(error);
+      else setEventsData(data);
+    }
+    getEvents();
+  }, []);
 
   // Split into upcoming / past based on today's date
   const { upcoming, past } = useMemo(() => {
@@ -18,7 +28,7 @@ const Events = () => {
       upcoming: filtered.filter(e => new Date(e.date) >= today).sort((a, b) => new Date(a.date) - new Date(b.date)),
       past: filtered.filter(e => new Date(e.date) < today).sort((a, b) => new Date(b.date) - new Date(a.date)),
     };
-  }, [activeCategory]);
+  }, [activeCategory, eventsData]);
 
   const categoryColors = {
     Workshop: 'bg-blue-500/20 text-blue-300 border-blue-500/30',

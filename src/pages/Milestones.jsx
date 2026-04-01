@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import milestonesData from '../data/milestones.json';
+import React, { useState, useEffect, useMemo } from 'react';
+import { supabase } from '../lib/supabase.js';
 import useCountUp from '../hooks/useCountUp';
 
 const colorMap = {
@@ -32,15 +32,27 @@ const MileStat = ({ value, prefix = '', suffix = '', label }) => {
 };
 
 const Milestones = () => {
+  const [milestonesData, setMilestonesData] = useState([]);
+
+  useEffect(() => {
+    async function getMilestones() {
+      const { data, error } = await supabase.from('milestones').select('*');
+      if (error) console.error(error);
+      else setMilestonesData(data);
+    }
+    getMilestones();
+  }, []);
+
   // Find the latest milestone by date dynamically
   const latestMilestone = useMemo(() => {
+    if (!milestonesData || milestonesData.length === 0) return null;
     return [...milestonesData].sort((a, b) => new Date(b.date) - new Date(a.date))[0];
-  }, []);
+  }, [milestonesData]);
 
   // Sort all milestones newest first for the timeline
   const sortedMilestones = useMemo(() => {
     return [...milestonesData].sort((a, b) => new Date(b.date) - new Date(a.date));
-  }, []);
+  }, [milestonesData]);
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
@@ -65,34 +77,36 @@ const Milestones = () => {
       </div>
 
       {/* Latest Achievement Spotlight — dynamically resolved */}
-      <div className="mb-20">
-        <p className="text-primary font-bold tracking-widest text-xs uppercase mb-4">Latest Achievement</p>
-        <div className="flex flex-col md:flex-row items-stretch rounded-xl overflow-hidden glass-card shadow-2xl">
-          {latestMilestone.imageUrl && (
-            <div className="w-full md:w-2/5 relative min-h-[200px]">
-              <img
-                alt={latestMilestone.title}
-                className="w-full h-full object-cover"
-                src={latestMilestone.imageUrl}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-background-dark/20 to-transparent" />
+      {latestMilestone && (
+        <div className="mb-20">
+          <p className="text-primary font-bold tracking-widest text-xs uppercase mb-4">Latest Achievement</p>
+          <div className="flex flex-col md:flex-row items-stretch rounded-xl overflow-hidden glass-card shadow-2xl">
+            {latestMilestone.imageUrl && (
+              <div className="w-full md:w-2/5 relative min-h-[200px]">
+                <img
+                  alt={latestMilestone.title}
+                  className="w-full h-full object-cover"
+                  src={latestMilestone.imageUrl}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-background-dark/20 to-transparent" />
+              </div>
+            )}
+            <div className="flex grow flex-col justify-center gap-3 p-8">
+              <div>
+                <p className="text-primary text-sm font-semibold mb-1">Achievement Spotlight</p>
+                <p className="text-slate-400 text-xs">{latestMilestone.label}</p>
+              </div>
+              <h3 className="text-white text-3xl font-bold leading-tight tracking-tight">
+                {latestMilestone.title}
+              </h3>
+              <p className="text-primary text-xl font-bold">{latestMilestone.subtitle}</p>
+              <p className="text-slate-300 text-base leading-relaxed max-w-xl">
+                {latestMilestone.description}
+              </p>
             </div>
-          )}
-          <div className="flex grow flex-col justify-center gap-3 p-8">
-            <div>
-              <p className="text-primary text-sm font-semibold mb-1">Achievement Spotlight</p>
-              <p className="text-slate-400 text-xs">{latestMilestone.label}</p>
-            </div>
-            <h3 className="text-white text-3xl font-bold leading-tight tracking-tight">
-              {latestMilestone.title}
-            </h3>
-            <p className="text-primary text-xl font-bold">{latestMilestone.subtitle}</p>
-            <p className="text-slate-300 text-base leading-relaxed max-w-xl">
-              {latestMilestone.description}
-            </p>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Vertical Timeline */}
       <div className="relative mt-8">
@@ -104,7 +118,7 @@ const Milestones = () => {
         <div className="space-y-16 md:space-y-24">
           {sortedMilestones.map((milestone, index) => {
             const isLeft = index % 2 === 0;
-            const c = colorMap[milestone.color] || colorMap.primary;
+            const c = colorMap.blue;
 
             return (
               <div key={milestone.id} className="relative flex flex-col md:flex-row items-start md:items-center justify-between w-full pl-16 md:pl-0">

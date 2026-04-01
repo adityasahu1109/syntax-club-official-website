@@ -1,7 +1,18 @@
-import React from 'react';
-import blogsData from '../data/blogs.json';
+import React, { useState, useEffect } from 'react';
+import { supabase } from '../lib/supabase.js';
 
 const Blogs = () => {
+  const [blogsData, setBlogsData] = useState([]);
+
+  useEffect(() => {
+    async function getBlogs() {
+      const { data, error } = await supabase.from('blogs').select('*').order('date', { ascending: false });
+      if (error) console.error(error);
+      else setBlogsData(data);
+    }
+    getBlogs();
+  }, []);
+
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-20 py-12 w-full">
       <section className="mb-16">

@@ -52,29 +52,25 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(300px,auto)]">
           {/* Card 1: Outreach Lead */}
           <FadeIn direction="up" delay={100} className="md:col-span-7 lg:col-span-8 h-full flex w-full">
-            <div className="w-full bg-black/20 bg-white/5 rounded-xl border border-white/10 p-8 flex flex-col justify-between group hover:border-primary/50 transition-colors backdrop-blur-sm">
-              <div className="flex justify-between items-start">
-                <div className="space-y-4">
-                  <span className="text-primary text-xs font-bold uppercase tracking-widest">Leadership</span>
-                  <h3 className="text-3xl font-bold">Outreach Lead</h3>
-                  <div className="space-y-1">
-                    <p className="text-2xl font-medium text-slate-200">Alex Rivers</p>
-                    <p className="text-slate-600 dark:text-slate-500">Global Strategy &amp; Partnerships</p>
+            <div className="w-full bg-black/20 bg-white/5 rounded-xl border border-white/10 p-8 flex flex-col items-center justify-center text-center group hover:border-primary/50 transition-colors backdrop-blur-sm relative overflow-hidden">
+              {/* Decorative background element */}
+              <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500"></div>
+              
+              <div className="relative z-10 flex flex-col items-center gap-6">
+                <div className="space-y-3">
+                  <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] block">Leadership</span>
+                  <h3 className="text-4xl md:text-5xl font-black text-white tracking-tight">Mail us on </h3>
+                  <div className="space-y-1 pt-2">
+                    <p className="text-xl font-medium text-slate-400">SyntaX Outreach Team</p>
                   </div>
                 </div>
-                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/20 bg-slate-800">
-                  <img alt="Alex Rivers" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKa7Oek5MRwrHTI2xdvUbQmn565Ftt83mrHNqsmBGQOCIw18oZSRqZCybqAx_BOUszdgpQ4vT1IhP4cCn4bCHDoAKkVsk-W4fxfWy_tt2fHUStMOdPGMK0P-LnsHm2Zc8oKs9LsaHaD-ttTzOaZNU2epYPVzMpOzHSfChjPMwdxS26cwN6mlwISG9-vcOJtoi_QP0EwvY2LqngoNvh9mEAK8n0I4vd1p5lt15tQdxaga2VXUi2DVGaaNM6e-xlJ09aDUQ_4VOK9DM" />
+
+                <div className="flex flex-wrap justify-center gap-4 mt-4">
+                  <a className="flex items-center gap-3 bg-primary/10 text-primary border border-primary/20 px-8 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-primary hover:text-black transition-all shadow-[0_0_20px_rgba(6,245,249,0.1)] group-hover:shadow-[0_0_30px_rgba(6,245,249,0.2)]" href="mailto:syntaxvnit@gmail.com">
+                    <span className="material-symbols-outlined text-xl">mail</span>
+                    <span>syntaxvnit@gmail.com</span>
+                  </a>
                 </div>
-              </div>
-              <div className="flex flex-wrap gap-4 mt-8">
-                <a className="flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-lg font-bold hover:bg-primary hover:text-white dark:hover:text-background-dark transition-all" href="mailto:alex.rivers@codingclub.com">
-                  <span className="material-symbols-outlined text-xl">mail</span>
-                  <span className="break-all">alex.rivers@codingclub.com</span>
-                </a>
-                <a className="flex items-center gap-2 bg-black/40 border-white/5 border text-slate-300 border border-slate-300 border-white/10 px-6 py-3 rounded-lg font-bold hover:bg-slate-300 dark:hover:bg-slate-800 transition-all" href="tel:+15550123456">
-                  <span className="material-symbols-outlined text-xl">call</span>
-                  +1 (555) 012-3456
-                </a>
               </div>
             </div>
           </FadeIn>
@@ -111,22 +107,27 @@ const Contact = () => {
                 </div>
                 <h3 className="text-4xl font-bold mb-6">Headquarters</h3>
                 <div className="space-y-2 mb-8">
-                  <p className="text-xl text-slate-200">123 Tech Plaza</p>
-                  <p className="text-xl text-slate-200">Silicon Valley, CA 94025</p>
-                  <p className="text-slate-600 dark:text-slate-500">United States of America</p>
+                  <p className="text-xl text-slate-200">Room 34, New Academic Building</p>
+                  <p className="text-xl text-slate-200">Visvesvaraya National Institute of Technology</p>
+                  <p className="text-xl text-slate-200">Nagpur, Maharashtra 440010</p>
+                  <p className="text-slate-600 dark:text-slate-500">India</p>
                 </div>
-                <button className="w-fit flex items-center gap-2 bg-black/40 border-white/5 border text-slate-300 border border-slate-300 border-white/10 px-8 py-4 rounded-lg font-bold hover:bg-slate-300 dark:hover:bg-slate-800 transition-all">
+                <a href="https://maps.app.goo.gl/ioVxJzYHScptdgdC7?g_st=aw" target="_blank" rel="noopener noreferrer" className="w-fit flex items-center gap-2 bg-black/40 border-white/5 border text-slate-300 border border-slate-300 border-white/10 px-8 py-4 rounded-lg font-bold hover:bg-slate-300 dark:hover:bg-slate-800 transition-all">
                   Get Directions
                   <span className="material-symbols-outlined">north_east</span>
-                </button>
+                </a>
               </div>
-              <div className="w-full lg:w-1/2 min-h-[300px] bg-black/40 border-white/5 border relative">
-                <div className="absolute inset-0 grayscale opacity-40 hover:opacity-60 transition-opacity" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8f_FW78EukLAkn5pZMJw-H7U44TieL9nI4_HxEzQoXTSLr18QRXrbckt-DJmPeJpjFiAz6Xs_mzdEWTkDLF9aoDGsWJB1w3E6Xi8_avngw8aAG4YGY8kMIjX-0wGV2wNwgh-FIOwa5rdqlMhUpBR0m4RFdfehMuX98Y6hgLIbEHzt-C4NHm_X5M_MoKAUlxPXfAlnbKTBsySSghXY2TkX15RHUEFb4K95PBbmsH4anctcvoqdGIzVkp4usIA4iEQJhmYeN7cbHcE")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center animate-pulse">
-                    <div className="w-4 h-4 bg-primary rounded-full shadow-[0_0_20px_#06f5f9]"></div>
-                  </div>
-                </div>
+              <div className="w-full lg:w-1/2 min-h-[300px] border-white/5 border relative overflow-hidden backdrop-blur-md">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.723151776958!2d79.049936!3d21.1236008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1003637eff7%3A0xef447096b8b8c27c!2sSyntaX%20Vnit%20Workspace!5e0!3m2!1sen!2sin!4v1775238918520!5m2!1sen!2sin" 
+                  className="absolute inset-0 w-full h-full border-0" 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  style={{ filter: "invert(90%) hue-rotate(180deg) contrast(100%)", opacity: 0.8 }}
+                ></iframe>
+                {/* Custom Overlay to ensure the map respects the glassmorphism aesthetic */}
+                <div className="absolute inset-0 pointer-events-none mix-blend-overlay bg-primary/10"></div>
               </div>
             </div>
           </FadeIn>

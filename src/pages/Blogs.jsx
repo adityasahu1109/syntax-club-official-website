@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase.js';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
   const [blogsData, setBlogsData] = useState([]);
@@ -60,10 +61,10 @@ const Blogs = () => {
               </p>
               
               <div className="mt-auto">
-                <button className="w-full px-6 py-3 rounded-lg bg-primary/10 text-primary font-bold text-sm tracking-widest uppercase border border-primary/20 hover:bg-primary hover:text-background-dark transition-all flex items-center justify-center gap-2">
+                <Link to={`/blogs/${blog.slug || blog.id}`} className="w-full px-6 py-3 rounded-lg bg-primary/10 text-primary font-bold text-sm tracking-widest uppercase border border-primary/20 hover:bg-primary hover:text-background-dark transition-all flex items-center justify-center gap-2">
                   Read Full Article
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>

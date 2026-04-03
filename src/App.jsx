@@ -15,6 +15,7 @@ import Milestones from './pages/Milestones';
 import Projects from './pages/Projects';
 import Team from './pages/Team';
 import Blogs from './pages/Blogs';
+import BlogArticle from './pages/BlogArticle';
 import Admin from './pages/Admin';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/alumni" element={<div className="w-full pt-20"><Alumni /></div>} />
             <Route path="/milestones" element={<div className="w-full pt-20"><Milestones /></div>} />
             <Route path="/blogs" element={<div className="w-full pt-20"><Blogs /></div>} />
+            <Route path="/blogs/:slug" element={<div className="w-full pt-20"><BlogArticle /></div>} />
             <Route path="/contact" element={<div className="w-full pt-20"><Contact /></div>} />
             <Route path="/admin" element={<div className="w-full pt-20"><Admin /></div>} />
           </Routes>

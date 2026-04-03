@@ -34,7 +34,7 @@ const SCHEMAS = {
     { name: 'date', label: 'Date *', required: true, type: 'date' },
     { name: 'excerpt', label: 'Excerpt *', required: true, type: 'textarea' },
     { name: 'imageUrl', label: 'Image URL *', required: true },
-    { name: 'content', label: 'Content (optional)', type: 'textarea' },
+    { name: 'content', label: 'Content (Markdown) *', type: 'markdown', required: true },
   ],
   alumni: [
     { name: 'name', label: 'Name *', required: true },
@@ -165,6 +165,11 @@ const Admin = () => {
       if (isNew) {
         // Insert (let DB handle ID)
         delete payload.id; 
+        
+        if (activeTab === 'blogs' && payload.title) {
+          payload.slug = payload.title.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + Math.floor(Date.now() / 1000);
+        }
+
         const { data: inserted, error } = await supabase.from(activeTab).insert([payload]).select();
         if (error) throw error;
         setData(prev => [...prev, inserted[0]]);
@@ -302,6 +307,39 @@ const Admin = () => {
                       required={field.required} name={field.name} value={editingItem[field.name] || ''} onChange={handleChange} rows={4} 
                       className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:outline-none transition-colors" 
                     />
+                  ) : field.type === 'markdown' ? (
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center gap-4">
+                        <label className="cursor-pointer bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 transition-colors px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+                          <span className="material-symbols-outlined text-sm">upload_file</span>
+                          Upload .md File
+                          <input 
+                            type="file" 
+                            accept=".md" 
+                            className="hidden" 
+                            onChange={(e) => {
+                              const file = e.target.files[0];
+                              if (!file) return;
+                              const reader = new FileReader();
+                              reader.onload = (event) => {
+                                setEditingItem(prev => ({ ...prev, [field.name]: event.target.result }));
+                              };
+                              reader.readAsText(file);
+                            }} 
+                          />
+                        </label>
+                        <span className="text-xs text-slate-500 font-bold uppercase tracking-widest">or paste below</span>
+                      </div>
+                      <textarea 
+                        required={field.required} 
+                        name={field.name} 
+                        value={editingItem[field.name] || ''} 
+                        onChange={handleChange} 
+                        rows={12} 
+                        className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 min-h-[300px] text-white focus:border-primary focus:outline-none transition-colors font-mono text-sm leading-relaxed" 
+                        placeholder="# Write your markdown here..."
+                      />
+                    </div>
                   ) : (
                     <input 
                       required={field.required} type={field.type || 'text'} name={field.name} value={editingItem[field.name] || ''} onChange={handleChange} 

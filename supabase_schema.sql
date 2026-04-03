@@ -7,7 +7,6 @@ CREATE TABLE public.projects (
   "imageUrl" text NOT NULL,
   "liveUrl" text,
   "githubUrl" text,
-  "blogUrl" text,
   created_at timestamp with time zone DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 

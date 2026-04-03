@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2026-04-03
+**The Knowledge Platform Update**
+We have deeply integrated a massive dynamic Markdown engine directly into the application, transforming SyntaX into a fully-fledged authoring platform!
+
+### Added
+- **Native Markdown Authoring (`react-markdown` & `remark-gfm`)**: Directly paste or construct GitHub-styled markdown blocks across the site.
+- **Admin Document Uploads**: The `/admin` panel now features a dedicated drag-and-drop / `.md` file uploader to inject articles smoothly without touching a single line of web-code.
+- **Syntax Highlighting**: Code blocks written inside your blogs or project logs are now fully tokenized and styled automatically utilizing `react-syntax-highlighter` using a sleek VSC dark theme.
+- **Project Journals (`/projects/:slug`)**: Open Source Projects can now house deeply informative, rich-text markdown files so the community can log their challenges and methodologies.
+- **Dynamic Routing Slugs**: The database now automatically strips special characters and constructs SEO-friendly, unique URLs like `/my-awesome-post-17142438` for blogs and projects!
+
+### Changed
+- Expanded the width of `BlogArticle` pages to effortlessly scale across entire laptop and wide-monitor screens.
+- Completely re-engineered the `Projects` showcase cards for a better UX experience where the entire physical card bounds act as an implicit Link (except when hovering the absolute repo/live buttons).
+
+### Removed
+- Retired the legacy `blogUrl` external router from projects, replacing it with the integrated Markdown CMS.
+
+---
+
 ## [1.2.0] - 2026-04-02
 **The Database & Admin Update**
 Our biggest update yet! We've transitioned from static data files to a fully scalable backend so the SyntaX team can manage website content live without touching code.

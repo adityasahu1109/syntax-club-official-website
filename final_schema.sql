@@ -15,7 +15,8 @@ CREATE TABLE public.projects (
   "imageUrl" text NOT NULL,
   "liveUrl" text,
   "githubUrl" text,
-  "blogUrl" text
+  slug text UNIQUE,
+  content text
 );
 
 -- Create Team Table

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase.js';
+import { Link } from 'react-router-dom';
 import FadeIn from '../components/FadeIn';
 
 const Projects = () => {
@@ -36,9 +37,15 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {projectsData.map((project, index) => (
           <FadeIn key={project.id} direction="up" delay={index * 150} className="flex">
-            <div className="group flex flex-col w-full bg-white/5 dark:bg-primary/5 border border-white/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_20px_rgba(6,245,249,0.08)]">
+            <div className="group flex flex-col w-full bg-white/5 dark:bg-primary/5 border border-white/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_20px_rgba(6,245,249,0.08)] relative">
+              
+              {/* Invisible Link Covering Entire Card (Only if article exists) */}
+              {project.content && project.content.trim() !== '' && (
+                <Link to={`/projects/${project.slug || project.id}`} className="absolute inset-0 z-10" aria-label={`Read more about ${project.title}`} />
+              )}
+
               {/* Thumbnail */}
-              <div className="relative aspect-video overflow-hidden bg-black/40 border-white/5 border">
+              <div className="relative aspect-video overflow-hidden bg-black/40 border-white/5 border-b">
                 <img
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -65,28 +72,24 @@ const Projects = () => {
 
               {/* Body */}
               <div className="p-6 flex flex-col flex-1">
-                {/* Clickable title → redirects to blog/detail page */}
-                <a
-                  href={project.blogUrl || '#'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block mb-3 group/title"
-                  title="Read more about this project"
-                >
-                  <h3 className="text-white text-xl font-black tracking-tight leading-snug group-hover/title:text-primary transition-colors">
+                {/* Title (No internal link needed since absolute link covers it) */}
+                <div className="block mb-3 group/title">
+                  <h3 className={`text-white text-xl font-black tracking-tight leading-snug ${project.content?.trim() ? 'group-hover/title:text-primary transition-colors' : ''}`}>
                     {project.title}
-                    <span className="inline-block ml-2 opacity-0 group-hover/title:opacity-100 transition-opacity align-middle">
-                      <span className="material-symbols-outlined text-base text-primary">open_in_new</span>
-                    </span>
+                    {project.content?.trim() && (
+                      <span className="inline-block ml-2 opacity-0 group-hover:opacity-100 transition-opacity align-middle">
+                        <span className="material-symbols-outlined text-base text-primary">open_in_new</span>
+                      </span>
+                    )}
                   </h3>
-                </a>
+                </div>
 
                 <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-1">
                   {project.description}
                 </p>
 
                 {/* Action buttons — consistent sizing */}
-                <div className="flex gap-3 mt-auto pt-4 border-t border-slate-200 dark:border-white/5">
+                <div className="flex gap-3 mt-auto pt-4 border-t border-slate-200 dark:border-white/5 relative z-20">
                   {/* GitHub — always shown */}
                   <a
                     href={project.githubUrl || '#'}

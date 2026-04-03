@@ -10,7 +10,7 @@ const SCHEMAS = {
     { name: 'imageUrl', label: 'Image URL *', required: true },
     { name: 'liveUrl', label: 'Live URL (optional)' },
     { name: 'githubUrl', label: 'GitHub URL (optional)' },
-    { name: 'blogUrl', label: 'Blog URL (optional)' },
+    { name: 'content', label: 'Content (Markdown)', type: 'markdown' },
   ],
   team: [
     { name: 'name', label: 'Name *', required: true },
@@ -166,7 +166,7 @@ const Admin = () => {
         // Insert (let DB handle ID)
         delete payload.id; 
         
-        if (activeTab === 'blogs' && payload.title) {
+        if ((activeTab === 'blogs' || activeTab === 'projects') && payload.title) {
           payload.slug = payload.title.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + Math.floor(Date.now() / 1000);
         }
 

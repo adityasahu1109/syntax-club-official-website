@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import Events from './pages/Events';
 import Milestones from './pages/Milestones';
 import Projects from './pages/Projects';
+import ProjectArticle from './pages/ProjectArticle';
 import Team from './pages/Team';
 import Blogs from './pages/Blogs';
 import BlogArticle from './pages/BlogArticle';
@@ -32,6 +33,7 @@ function App() {
             <Route path="/about" element={<div className="w-full pt-20"><Team /></div>} />
             <Route path="/events" element={<div className="w-full pt-20"><Events /></div>} />
             <Route path="/projects" element={<div className="w-full pt-20"><Projects /></div>} />
+            <Route path="/projects/:slug" element={<div className="w-full pt-20"><ProjectArticle /></div>} />
             <Route path="/alumni" element={<div className="w-full pt-20"><Alumni /></div>} />
             <Route path="/milestones" element={<div className="w-full pt-20"><Milestones /></div>} />
             <Route path="/blogs" element={<div className="w-full pt-20"><Blogs /></div>} />

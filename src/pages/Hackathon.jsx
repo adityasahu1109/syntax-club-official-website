@@ -30,9 +30,9 @@ const Hackathon = () => {
   return (
     <div className="w-full min-h-screen bg-[#050505] text-white overflow-x-hidden" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
       <SEO 
-        title="Synhack 2026 | The Ultimate 40-Hour Web3 Hackathon" 
-        description="Join SyntaX Club's flagship 40-hour hacking marathon. Decentralized ideation, massive bounties, and relentless building. Register your node now."
-        keywords="hackathon, synhack, vnit, web3, coding marathon, syntax club event"
+        title="Synhack 2026 | The Ultimate 40-Hour Flagship Web3 Hackathon" 
+        description="Join SyntaX Club's flagship 40-hour hacking marathon at VNIT. Decentralized ideation, massive bounty pools, and 40 hours of relentless building with fellow developers."
+        keywords="hackathon, synhack 2026, vnit nagpur, web3 development, coding marathon, syntax club event"
         path="/synhack"
       />
       {/* Import Web3 Font */}

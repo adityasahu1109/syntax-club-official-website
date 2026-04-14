@@ -40,9 +40,9 @@ const Events = () => {
   return (
     <div className="max-w-7xl mx-auto w-full px-6 py-8 overflow-hidden">
       <SEO 
-        title="Events | SyntaX Club VNIT" 
-        description="Discover upcoming and past developer events, workshops, seminars, and hackathons hosted by SyntaX Club."
-        keywords="syntax club events, coding workshops, hackathons vnit, tech seminars"
+        title="Developer Events | SyntaX Club VNIT" 
+        description="Join the SyntaX Club community at VNIT Nagpur for hands-on workshops, insightful tech seminars, and competitive hackathons designed to sharpen your skills."
+        keywords="syntax club events, coding workshops, hackathons vnit nagpur, tech seminars, developer community"
         path="/events"
       />
       {/* Page Header */}

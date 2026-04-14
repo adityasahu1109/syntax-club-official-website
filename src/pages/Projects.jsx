@@ -22,8 +22,8 @@ const Projects = () => {
     <div className="max-w-7xl mx-auto px-6 lg:px-20 py-12 w-full overflow-hidden">
       <SEO 
         title="Open Source Projects | SyntaX Club VNIT" 
-        description="Explore cutting-edge prototypes and community-driven innovations built by the SyntaX members."
-        keywords="syntax club projects, open source vnit, coding club portfolios"
+        description="Explore cutting-edge prototypes, community-driven innovations, and open-source software built by the SyntaX members at VNIT Nagpur. Connect with our builders."
+        keywords="syntax club projects, open source vnit nagpur, coding club portfolios, react projects, software prototypes"
         path="/projects"
       />
       {/* Header */}

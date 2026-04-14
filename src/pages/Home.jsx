@@ -212,9 +212,9 @@ const Home = () => {
   return (
     <div className="w-full overflow-hidden">
       <SEO 
-        title="SyntaX Club VNIT | Connect, Code, Build" 
-        description="The premier coding club of VNIT Nagpur. Join the community to learn modern tech stack, build projects, and win hackathons."
-        keywords="coding, hackathon, vnit, web development, syntax club, software engineering"
+        title="SyntaX Club VNIT | Connect, Code, and Build the Future" 
+        description="The premier coding club at VNIT Nagpur. Join our vibrant community to master modern tech stacks, collaborate on real-world software projects, and win national hackathons."
+        keywords="coding, hackathon, vnit nagpur, web development, syntax club, software engineering, open source"
         path="/"
       />
       {/* ========== HERO SECTION (Backgrounds moved globally) ========== */}

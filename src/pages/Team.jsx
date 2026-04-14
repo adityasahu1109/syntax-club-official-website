@@ -23,8 +23,8 @@ const Team = () => {
     <div className="flex-1 flex flex-col items-center py-12 px-6 overflow-hidden">
       <SEO 
         title="Our Team | SyntaX Club VNIT" 
-        description="Meet the core members, architects, and visionaries driving the SyntaX Club forward."
-        keywords="syntax club team, vnit coding club members, syntax club architects"
+        description="Meet the core members, architects, and visionaries driving the SyntaX Club forward. Discover the dedicated team building the next generation of software at VNIT."
+        keywords="syntax club team, vnit nagpur coding club members, syntax club architects, student developer community"
         path="/about"
       />
       <div className="max-w-6xl w-full">

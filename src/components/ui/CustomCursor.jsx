@@ -50,12 +50,12 @@ const CustomCursor = () => {
     let animFrame;
     const animate = () => {
       // Cursor dot follows immediately
-      cursorPos.current.x += (mousePos.current.x - cursorPos.current.x) * 0.3;
-      cursorPos.current.y += (mousePos.current.y - cursorPos.current.y) * 0.3;
+      cursorPos.current.x = mousePos.current.x;
+      cursorPos.current.y = mousePos.current.y;
 
-      // Ring follows with lag
-      ringPos.current.x += (mousePos.current.x - ringPos.current.x) * 0.12;
-      ringPos.current.y += (mousePos.current.y - ringPos.current.y) * 0.12;
+      // Ring follows immediately to fix lag
+      ringPos.current.x = mousePos.current.x;
+      ringPos.current.y = mousePos.current.y;
 
       if (cursorRef.current) {
         cursorRef.current.style.transform = `translate(${cursorPos.current.x}px, ${cursorPos.current.y}px) translate(-50%, -50%) scale(${isClicking ? 0.6 : 1})`;

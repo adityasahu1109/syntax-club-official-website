@@ -50,6 +50,8 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "spin-slow": "spin 8s linear infinite",
         "orbit": "orbit 20s linear infinite",
+        "marquee": "marquee 25s linear infinite",
+        "gradient": "gradient 8s linear infinite",
       },
       keyframes: {
         "float": {
@@ -83,6 +85,14 @@ export default {
         "orbit": {
           "0%": { transform: "rotate(0deg) translateX(150px) rotate(0deg)" },
           "100%": { transform: "rotate(360deg) translateX(150px) rotate(-360deg)" },
+        },
+        "marquee": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "gradient": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
         },
       },
       backgroundImage: {

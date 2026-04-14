@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { supabase } from '../lib/supabase.js';
 import FadeIn from '../components/FadeIn';
+import SEO from '../components/SEO';
 
 const CATEGORIES = ['All', 'Workshop', 'Seminar', 'Competition'];
 
@@ -38,6 +39,12 @@ const Events = () => {
 
   return (
     <div className="max-w-7xl mx-auto w-full px-6 py-8 overflow-hidden">
+      <SEO 
+        title="Events | SyntaX Club VNIT" 
+        description="Discover upcoming and past developer events, workshops, seminars, and hackathons hosted by SyntaX Club."
+        keywords="syntax club events, coding workshops, hackathons vnit, tech seminars"
+        path="/events"
+      />
       {/* Page Header */}
       <FadeIn direction="down">
         <div className="flex flex-col gap-6 mb-10 text-center md:text-left items-center md:items-start">

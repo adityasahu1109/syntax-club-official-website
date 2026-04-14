@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase.js';
 import { Link } from 'react-router-dom';
 import FadeIn from '../components/FadeIn';
+import SEO from '../components/SEO';
 
 const Projects = () => {
   const [projectsData, setProjectsData] = useState([]);
@@ -19,6 +20,12 @@ const Projects = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-20 py-12 w-full overflow-hidden">
+      <SEO 
+        title="Open Source Projects | SyntaX Club VNIT" 
+        description="Explore cutting-edge prototypes and community-driven innovations built by the SyntaX members."
+        keywords="syntax club projects, open source vnit, coding club portfolios"
+        path="/projects"
+      />
       {/* Header */}
       <FadeIn direction="down">
         <section className="mb-12 md:mb-16 text-center md:text-left flex flex-col items-center md:items-start">

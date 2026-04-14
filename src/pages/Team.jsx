@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase.js';
 import FadeIn from '../components/FadeIn';
+import SEO from '../components/SEO';
 
 const Team = () => {
   const [teamData, setTeamData] = useState([]);
@@ -20,6 +21,12 @@ const Team = () => {
 
   return (
     <div className="flex-1 flex flex-col items-center py-12 px-6 overflow-hidden">
+      <SEO 
+        title="Our Team | SyntaX Club VNIT" 
+        description="Meet the core members, architects, and visionaries driving the SyntaX Club forward."
+        keywords="syntax club team, vnit coding club members, syntax club architects"
+        path="/about"
+      />
       <div className="max-w-6xl w-full">
         <FadeIn direction="down">
           <div className="mb-12 text-center md:text-left flex flex-col items-center md:items-start">

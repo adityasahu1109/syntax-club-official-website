@@ -3,6 +3,7 @@ import useCountUp from '../hooks/useCountUp';
 import FadeIn from '../components/FadeIn';
 import GridBackground from '../components/ui/GridBackground';
 import syntaxLogo from '../assets/syntax_logo.png';
+import SEO from '../components/SEO';
 
 /* ——————————————— Taglines ——————————————— */
 const TAGLINES = [
@@ -210,6 +211,12 @@ const CTASection = () => (
 const Home = () => {
   return (
     <div className="w-full overflow-hidden">
+      <SEO 
+        title="SyntaX Club VNIT | Connect, Code, Build" 
+        description="The premier coding club of VNIT Nagpur. Join the community to learn modern tech stack, build projects, and win hackathons."
+        keywords="coding, hackathon, vnit, web development, syntax club, software engineering"
+        path="/"
+      />
       {/* ========== HERO SECTION (Backgrounds moved globally) ========== */}
       <div className="relative w-full min-h-[100dvh] flex flex-col items-center pt-32 pb-16">
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -18,32 +18,49 @@ import Team from './pages/Team';
 import Blogs from './pages/Blogs';
 import BlogArticle from './pages/BlogArticle';
 import Admin from './pages/Admin';
+import Hackathon from './pages/Hackathon';
+
+// Main Layout component for the existing website
+const MainLayout = () => {
+  return (
+    <>
+      <GlobalBackground />
+      <div className="relative z-10 flex flex-col min-h-screen text-white w-full">
+        <Navbar />
+        <main className="flex-1 w-full flex flex-col items-center">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+};
 
 function App() {
   return (
     <Router>
       <CustomCursor />
       <ScrollToTop />
-      <GlobalBackground />
-      <div className="relative z-10 flex flex-col min-h-screen text-white w-full">
-        <Navbar />
-        <main className="flex-1 w-full flex flex-col items-center">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<div className="w-full pt-20"><Team /></div>} />
-            <Route path="/events" element={<div className="w-full pt-20"><Events /></div>} />
-            <Route path="/projects" element={<div className="w-full pt-20"><Projects /></div>} />
-            <Route path="/projects/:slug" element={<div className="w-full pt-20"><ProjectArticle /></div>} />
-            <Route path="/alumni" element={<div className="w-full pt-20"><Alumni /></div>} />
-            <Route path="/milestones" element={<div className="w-full pt-20"><Milestones /></div>} />
-            <Route path="/blogs" element={<div className="w-full pt-20"><Blogs /></div>} />
-            <Route path="/blogs/:slug" element={<div className="w-full pt-20"><BlogArticle /></div>} />
-            <Route path="/contact" element={<div className="w-full pt-20"><Contact /></div>} />
-            <Route path="/admin" element={<div className="w-full pt-20"><Admin /></div>} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      
+      <Routes>
+        {/* Isolated Standalone Pages */}
+        <Route path="/synhack" element={<Hackathon />} />
+        
+        {/* Main Website Layout Pages */}
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<div className="w-full pt-20"><Team /></div>} />
+          <Route path="events" element={<div className="w-full pt-20"><Events /></div>} />
+          <Route path="projects" element={<div className="w-full pt-20"><Projects /></div>} />
+          <Route path="projects/:slug" element={<div className="w-full pt-20"><ProjectArticle /></div>} />
+          <Route path="alumni" element={<div className="w-full pt-20"><Alumni /></div>} />
+          <Route path="milestones" element={<div className="w-full pt-20"><Milestones /></div>} />
+          <Route path="blogs" element={<div className="w-full pt-20"><Blogs /></div>} />
+          <Route path="blogs/:slug" element={<div className="w-full pt-20"><BlogArticle /></div>} />
+          <Route path="contact" element={<div className="w-full pt-20"><Contact /></div>} />
+          <Route path="admin" element={<div className="w-full pt-20"><Admin /></div>} />
+        </Route>
+      </Routes>
     </Router>
   );
 }
